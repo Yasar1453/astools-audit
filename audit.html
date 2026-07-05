@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>AsTools productcontrole — 994 pagina's</title>
+</head>
+<body>
+<style>
+:root {
+  --grond: #FAF9F6; --vlak: #FFFFFF; --inkt: #26241F; --inkt-zacht: #6B675E;
+  --lijn: #E6E2D9; --accent: #B4550A; --accent-zacht: #F4E3D3;
+  --hoog: #B3261E; --hoog-vlak: #FBEDEB; --midden: #9A6A00; --midden-vlak: #F9F0DB;
+  --laag: #56605A; --laag-vlak: #EDF0EC;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --grond: #1B1A17; --vlak: #24221E; --inkt: #ECE9E2; --inkt-zacht: #A5A096;
+  --lijn: #3A3730; --accent: #E8913D; --accent-zacht: #3A2C1D;
+  --hoog: #F2837A; --hoog-vlak: #3A2422; --midden: #E3B341; --midden-vlak: #362E1B;
+  --laag: #A9B4AD; --laag-vlak: #2A2E2B;
+} }
+:root[data-theme="light"] {
+  --grond: #FAF9F6; --vlak: #FFFFFF; --inkt: #26241F; --inkt-zacht: #6B675E;
+  --lijn: #E6E2D9; --accent: #B4550A; --accent-zacht: #F4E3D3;
+  --hoog: #B3261E; --hoog-vlak: #FBEDEB; --midden: #9A6A00; --midden-vlak: #F9F0DB;
+  --laag: #56605A; --laag-vlak: #EDF0EC;
+}
+:root[data-theme="dark"] {
+  --grond: #1B1A17; --vlak: #24221E; --inkt: #ECE9E2; --inkt-zacht: #A5A096;
+  --lijn: #3A3730; --accent: #E8913D; --accent-zacht: #3A2C1D;
+  --hoog: #F2837A; --hoog-vlak: #3A2422; --midden: #E3B341; --midden-vlak: #362E1B;
+  --laag: #A9B4AD; --laag-vlak: #2A2E2B;
+}
+* { box-sizing: border-box; }
+body { background: var(--grond); color: var(--inkt); margin: 0;
+  font: 16px/1.6 "Avenir Next", "Segoe UI", system-ui, sans-serif; }
+main { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+header.top { border-bottom: 3px solid var(--accent); padding-bottom: 24px; margin-bottom: 36px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 600; color: var(--accent); }
+h1 { font-size: 34px; line-height: 1.15; margin: 8px 0 10px; text-wrap: balance; font-weight: 700; }
+.sub { color: var(--inkt-zacht); max-width: 62ch; margin: 0; }
+.tegels { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 28px 0 8px; }
+.tegel { background: var(--vlak); border: 1px solid var(--lijn); border-radius: 6px; padding: 14px 16px; }
+.tegel .n { font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; display: block; }
+.tegel .l { font-size: 12.5px; color: var(--inkt-zacht); line-height: 1.35; display: block; margin-top: 2px; }
+.tegel.hoog .n { color: var(--hoog); } .tegel.midden .n { color: var(--midden); }
+h2 { font-size: 21px; margin: 44px 0 6px; }
+h2 + p.intro { margin: 0 0 18px; color: var(--inkt-zacht); max-width: 68ch; }
+.vondst { background: var(--vlak); border: 1px solid var(--lijn); border-left: 4px solid var(--laag);
+  border-radius: 6px; padding: 16px 20px; margin: 0 0 14px; }
+.vondst.hoog { border-left-color: var(--hoog); }
+.vondst.midden { border-left-color: var(--midden); }
+.vondst-kop { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.vondst h3 { font-size: 16.5px; margin: 0; }
+.pil { font-size: 11px; font-weight: 700; letter-spacing: .08em; padding: 2px 8px; border-radius: 99px; white-space: nowrap; }
+.pil.hoog { background: var(--hoog-vlak); color: var(--hoog); }
+.pil.midden { background: var(--midden-vlak); color: var(--midden); }
+.wat { margin: 8px 0 6px; }
+.advies { margin: 0; color: var(--inkt-zacht); font-size: 14.5px; }
+.advies::before { content: "Advies — "; font-weight: 600; color: var(--accent); }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+details { background: var(--vlak); border: 1px solid var(--lijn); border-radius: 6px; margin: 0 0 12px; }
+summary { cursor: pointer; padding: 13px 18px; font-weight: 600; list-style: none; display: flex; align-items: center; gap: 10px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "▸"; margin-left: auto; color: var(--inkt-zacht); transition: transform .15s; }
+details[open] summary::after { transform: rotate(90deg); }
+@media (prefers-reduced-motion: reduce) { summary::after { transition: none; } }
+summary .tel { background: var(--laag-vlak); color: var(--laag); font-size: 12px; font-weight: 700;
+  padding: 2px 9px; border-radius: 99px; font-variant-numeric: tabular-nums; }
+.tabelwrap { overflow-x: auto; border-top: 1px solid var(--lijn); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+td { padding: 8px 18px; border-top: 1px solid var(--lijn); vertical-align: top; }
+tr:first-child td { border-top: none; }
+td.detail { color: var(--inkt-zacht); white-space: nowrap; }
+.oklijst { margin: 0; padding: 0 0 0 2px; list-style: none; }
+.oklijst li { padding: 7px 0 7px 30px; position: relative; border-bottom: 1px solid var(--lijn); }
+.oklijst li::before { content: "✓"; position: absolute; left: 4px; color: var(--accent); font-weight: 700; }
+.methode { font-size: 13.5px; color: var(--inkt-zacht); border-top: 1px solid var(--lijn); margin-top: 56px; padding-top: 18px; }
+code { font: 13px/1.5 ui-monospace, "SF Mono", Menlo, monospace; background: var(--accent-zacht); padding: 1px 5px; border-radius: 4px; }
+</style>
+<main>
+<header class="top">
+  <span class="eyebrow">Productcontrole · astools.nl · 3 juli 2026</span>
+  <h1>Alle 994 productpagina's gecontroleerd</h1>
+  <p class="sub">Elke productpagina is geautomatiseerd nagelopen op beschrijving, prijzen, afbeeldingen, titels,
+  vindbaarheid en toegankelijkheid. Hieronder alles wat opviel, gerangschikt op ernst — inclusief twijfelgevallen.</p>
+  <div class="tegels">
+    <div class="tegel"><span class="n">994</span><span class="l">productpagina's gecheckt</span></div>
+    <div class="tegel hoog"><span class="n">3</span><span class="l">echte fouten</span></div>
+    <div class="tegel midden"><span class="n">1</span><span class="l">winkelbreed probleem (alt-teksten)</span></div>
+    <div class="tegel"><span class="n">449</span><span class="l">kleinere aandachtspunten / twijfel</span></div>
+  </div>
+</header>
+
+<h2>Echte fouten — direct oplossen</h2>
+<p class="intro">Drie gevallen waar de informatie op de pagina aantoonbaar fout of onbruikbaar is.</p>
+<article class="vondst hoog">
+  <div class="vondst-kop"><span class="pil hoog">FOUT</span><h3><a href="https://astools.nl/products/jaltest-knorr-bremse-activeringslicentie-add-on" target="_blank" rel="noopener">Jaltest (71502007) | Knorr-Bremse (Add-on) | Software-licentie</a></h3></div>
+  <p class="wat">De volledige productbeschrijving bestaat uit drie tekens: &quot;AI1&quot;. Een klant kan nergens zien wat deze licentie doet of voor welk apparaat hij is.</p>
+  <p class="advies">Schrijf een echte beschrijving (vergelijkbaar met de andere Jaltest-licentiepagina's, die wél volledig zijn).</p>
+</article>
+<article class="vondst hoog">
+  <div class="vondst-kop"><span class="pil hoog">FOUT</span><h3><a href="https://astools.nl/products/obdeleven-credit" target="_blank" rel="noopener">OBDeleven | Credits</a></h3></div>
+  <p class="wat">De doorstreepprijs (€1,48) is lager dan de verkoopprijs (€4,95) bij de variant „10 credits”. Er wordt dus een „korting” getoond die eigenlijk een prijsverhoging is.</p>
+  <p class="advies">Doorstreepprijs verwijderen of corrigeren. Onjuiste van/voor-prijzen zijn bovendien juridisch gevoelig (misleidende prijsvermelding).</p>
+</article>
+<article class="vondst hoog">
+  <div class="vondst-kop"><span class="pil hoog">FOUT</span><h3><a href="https://astools.nl/products/godiag-mqb-data-collector-elv-tcm-dsg-versnellingsbakadapter" target="_blank" rel="noopener">GoDiag | MQB Data Collector (ELV/TCM-DSG) Versnellingsbakadapter</a></h3></div>
+  <p class="wat">Doorstreepprijs €14,95 is lager dan de verkoopprijs €19,95. Het product is bovendien uitverkocht.</p>
+  <p class="advies">Zelfde als hierboven: doorstreepprijs corrigeren of weghalen.</p>
+</article>
+
+<h2>Feitencontrole (batch 1: de 25 duurste producten)</h2>
+<p class="intro">Aanvullend op de vorm-audit: interne consistentie + verificatie van 94 kernclaims tegen fabrikantsites. Resultaat: 64 claims kloppen, 9 aantoonbaar fout, 13 twijfel, 8 niet verifieerbaar.</p>
+<article class="vondst hoog">
+  <div class="vondst-kop"><span class="pil hoog">FOUT</span><h3>Drie Jaltest-licenties (€2.650–€4.200) hebben een variant „Levenslang" terwijl de tekst 12 maanden zegt</h3></div>
+  <p class="wat">Bij de CV- (29303), Vrachtwagen- (293100) en Autobus-licentie (293300) heet de gekochte variant „Levenslang", maar de beschrijving stelt expliciet dat de licentie twaalf maanden geldig is en de module daarna blokkeert. Bij 29303 gaat de beschrijving bovendien over een ander artikelnummer (71502018) dan de titel.</p>
+  <p class="advies">Variantnaam of tekst corrigeren; bij deze bedragen is een misleidende looptijd juridisch gevoelig. Achtergrond: Jaltest-activatie is permanent, de gebruikslicentie jaarlijks — de pagina's halen die twee door elkaar.</p>
+</article>
+<article class="vondst hoog">
+  <div class="vondst-kop"><span class="pil hoog">FOUT</span><h3>Verkeerde specs bevestigd bij fabrikanten (5 producten) + OHW-dekkingsclaim</h3></div>
+  <p class="wat">Autel MaxiSys Elite II Pro: accu 15.400→11.000 mAh en verkeerde VCI-naam. Autel MaxiCom Ultra Lite: spec-tabel 12.9"→12.7". Topdon Phoenix Max: 7,6V→3,8V. Topdon Phoenix Smart: 12.000→12.600 mAh. Launch PAD VII: camera 16/5→13/8 MP. Jaltest OHW claimt landbouwdekking die volgens Jaltest bij de aparte AGV-module hoort. OBDSTAR ECU Master: tekst zegt „drie configuraties", de shop verkoopt er vijf.</p>
+  <p class="advies">Specs corrigeren aan de hand van de fabrikantpagina's (bronnen in factcheck-bevindingen.csv).</p>
+</article>
+<article class="vondst midden">
+  <div class="vondst-kop"><span class="pil midden">LET OP</span><h3>Template-fout: „IP40 stof- en spatwaterbestendig" op vrijwel alle Jaltest-hardwarepagina's</h3></div>
+  <p class="wat">IP40 betekent per definitie géén waterbescherming; op de Marine-pagina's wordt de VCI zelfs „waterbestendig" genoemd. Dit is een template-tekst en zit vermoedelijk op veel meer Jaltest-pagina's dan de 25 gecontroleerde.</p>
+  <p class="advies">Winkelbreed in één keer fixen: „IP40 stofbestendig" zonder waterclaim, of de werkelijke IP-klasse bij Cojali opvragen.</p>
+</article>
+
+<h2>Gecorrigeerd na controle</h2>
+<p class="intro">Aanvankelijk als fout gemeld, maar na visuele vergelijking van de foto's bijgesteld.</p>
+<article class="vondst midden">
+  <div class="vondst-kop"><span class="pil midden">LET OP</span><h3><a href="https://astools.nl/products/bmw-enet-obd2-rj45-interfacekabel-1" target="_blank" rel="noopener">BMW ENET OBD2 - RJ45 | Interfacekabel — 2× gelist, maar het zijn twee uitvoeringen</a></h3></div>
+  <p class="wat">Eerder gemeld als duplicaat, maar op de foto's is te zien dat het twee fysiek verschillende kabels zijn: de ene heeft een afgeronde OBD2-stekker met CE-logo en ronde ribbel-trekontlasting, de andere een hoekige stekker met vier schroeven en een geel-zwarte trekontlasting. De verschillende SKU's (A0231-1 / A0232-1) kloppen daarmee. Wel hebben beide pagina's een identieke titel en spreken de teksten elkaar tegen (Windows-only vs ook iOS/Android; bouwjaren „vanaf 2008/2009” vs G-serie pas vanaf 2016).</p>
+  <p class="advies">Geef beide pagina's een onderscheidende titel (bijv. „compact model” vs „geschroefde behuizing”) óf voeg ze samen tot één pagina met twee varianten. Trek in elk geval de tegenstrijdige specificaties gelijk.</p>
+</article>
+
+<h2>Winkelbreed &amp; structureel</h2>
+<p class="intro">Geen fouten op één pagina, maar patronen die (bijna) de hele shop raken.</p>
+<article class="vondst midden">
+  <div class="vondst-kop"><span class="pil midden">LET OP</span><h3><a href="https://astools.nl/products" target="_blank" rel="noopener">985 van de 994 producten: afbeeldingen zonder alt-tekst</a></h3></div>
+  <p class="wat">Winkelbreed probleem: bij 985 producten heeft geen enkele productafbeelding een alt-tekst, bij 2 producten een deel. In totaal gaat het om vrijwel alle afbeeldingen in de webshop.</p>
+  <p class="advies">Alt-teksten zijn nodig voor blinde/slechtziende bezoekers (schermlezers) en voor Google Afbeeldingen. Dit is in Shopify per afbeelding in te stellen, maar bij deze aantallen is een app of bulk-script (bijv. alt-tekst = producttitel + volgnummer) de praktische route.</p>
+</article>
+<article class="vondst midden">
+  <div class="vondst-kop"><span class="pil midden">LET OP</span><h3><a href="https://astools.nl/products/jaltest-kawasaki-6-6-pins-obd-voedingskabel-waterscooter" target="_blank" rel="noopener">Jaltest Kawasaki 6-6 pins OBD-voedingskabel (waterscooter)</a></h3></div>
+  <p class="wat">Producttype-veld is leeg. Hierdoor valt het product buiten type-filters en gestructureerde data.</p>
+  <p class="advies">Producttype invullen in Shopify (zoals bij vergelijkbare verloopkabels).</p>
+</article>
+<article class="vondst midden">
+  <div class="vondst-kop"><span class="pil midden">LET OP</span><h3><a href="https://astools.nl/products/obdstar-c4-02-adapter" target="_blank" rel="noopener">OBDSTAR C4-02 Adapter</a></h3></div>
+  <p class="wat">Producttype-veld is leeg, en het product heeft maar één foto.</p>
+  <p class="advies">Producttype invullen; eventueel extra foto toevoegen.</p>
+</article>
+
+<h2>Kleinere aandachtspunten &amp; twijfelgevallen</h2>
+<p class="intro">Geen fouten, maar zoals gevraagd bij twijfel vermeld. Klap open voor de volledige lijsten.</p>
+
+<details><summary>Slechts één productfoto <span class="tel">327 producten</span></summary>
+<div class="tabelwrap"><table><tr><td><a href="https://astools.nl/products/universele-16-pins-obd2-poort-met-16-open-eindkabels-30-cm" target="_blank" rel="noopener">16-pins OBD2 Poort (Vrouwelijk) met 16 Open Eindkabels (30 cm) | Accessoires</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicheck-mx808-update-licentie" target="_blank" rel="noopener">Autel MaxiCheck MX808 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicheck-mx808s-update-licentie" target="_blank" rel="noopener">Autel MaxiCheck MX808S | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicheck-mx808s-ts-update-licentie" target="_blank" rel="noopener">Autel MaxiCheck MX808S-TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicheck-mx808ts-update-licentie" target="_blank" rel="noopener">Autel MaxiCheck MX808TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicheck-mx900-update-licentie" target="_blank" rel="noopener">Autel MaxiCheck MX900 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicheck-mx900-ts-update-licentie" target="_blank" rel="noopener">Autel MaxiCheck MX900-TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk808-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK808 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk808bt-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK808BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk808k-bt-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK808K-BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk808s-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK808S | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk808s-ts-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK808S-TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk808ts-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK808TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk900-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK900 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk900-bt-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK900-BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk900-ts-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK900-TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk906-pro-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK906 Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk906-pro-ts-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK906 Pro-TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk906bt-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK906BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk906s-pro-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK906S Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk906s-pro-ts-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK906S Pro-TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk908-ii-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK908 II | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk908-pro-ii-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK908 Pro II | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk908-pro-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK908 Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-mk908-update-licentie" target="_blank" rel="noopener">Autel MaxiCom MK908 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-ultra-lite-s-update-licentie" target="_blank" rel="noopener">Autel MaxiCom Ultra Lite S | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxicom-ultra-lite-update-licentie" target="_blank" rel="noopener">Autel MaxiCom Ultra Lite | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxidas-ds808-update-licentie" target="_blank" rel="noopener">Autel MaxiDas DS808 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxidas-ds808bt-update-licentie" target="_blank" rel="noopener">Autel MaxiDas DS808BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxidas-ds808s-update-licentie" target="_blank" rel="noopener">Autel MaxiDas DS808S | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxidas-ds808s-bt-update-licentie" target="_blank" rel="noopener">Autel MaxiDas DS808S-BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxidas-ds808ts-update-licentie" target="_blank" rel="noopener">Autel MaxiDas DS808TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxidas-ds900-update-licentie" target="_blank" rel="noopener">Autel MaxiDas DS900 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxidas-ds900bt-update-licentie" target="_blank" rel="noopener">Autel MaxiDas DS900BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxidas-ds900ts-update-licentie" target="_blank" rel="noopener">Autel MaxiDas DS900TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxiflash-jvci-26-pins-db26-16-pins-obd2-verloopkabel-interface" target="_blank" rel="noopener">Autel MaxiFlash JVCI | 26-pins DB26 - 16-pins OBD2 Verloopkabel | Interface</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-im508-15-pins-db15-16-pins-obd2-verloopkabel-sleutelprogrammeur" target="_blank" rel="noopener">Autel MaxiIM IM508 | 15-pins DB15 - 16-pins OBD2 Verloopkabel | Sleutelprogrammeur</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxiim-im508-update-licentie" target="_blank" rel="noopener">Autel MaxiIM IM508 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxiim-im508s-update-licentie" target="_blank" rel="noopener">Autel MaxiIM IM508S | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxiim-im608-ii-update-licentie" target="_blank" rel="noopener">Autel MaxiIM IM608 II | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxiim-im608-pro-update-licentie" target="_blank" rel="noopener">Autel MaxiIM IM608 Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxiim-im608-update-licentie" target="_blank" rel="noopener">Autel MaxiIM IM608 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxipro-mp808-update-licentie" target="_blank" rel="noopener">Autel MaxiPro MP808 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxipro-mp808bt-update-licentie" target="_blank" rel="noopener">Autel MaxiPro MP808BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxipro-mp808s-ts-update-licentie" target="_blank" rel="noopener">Autel MaxiPro MP808S-TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxipro-mp808ts-update-licentie" target="_blank" rel="noopener">Autel MaxiPro MP808TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxipro-mp900-update-licentie" target="_blank" rel="noopener">Autel MaxiPro MP900 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxipro-mp900-bt-kit-update-licentie" target="_blank" rel="noopener">Autel MaxiPro MP900-BT Kit | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxipro-mp900-bt-update-licentie" target="_blank" rel="noopener">Autel MaxiPro MP900-BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxipro-mp900-ts-update-licentie" target="_blank" rel="noopener">Autel MaxiPro MP900-TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxipro-mp900e-kit-update-licentie" target="_blank" rel="noopener">Autel MaxiPro MP900E Kit | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxipro-mp900e-update-licentie" target="_blank" rel="noopener">Autel MaxiPro MP900E | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-elite-ii-pro-update-licentie" target="_blank" rel="noopener">Autel MaxiSys Elite II Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-elite-update-licentie" target="_blank" rel="noopener">Autel MaxiSys Elite | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms906-pro-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS906 Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms906-pro-ts-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS906 Pro-TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms906-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS906 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms906bt-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS906BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms906cv-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS906CV | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms906s-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS906S | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms906ts-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS906TS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms908-elite-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS908 Elite | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms908-pro-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS908 Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms908-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS908 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms908cv-ii-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS908CV II | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms908cv-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS908CV | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms908p-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS908P | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms908s-pro-ii-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS908S Pro II | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms908s-pro-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS908S Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms909-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS909 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms909cv-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS909CV | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms909ev-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS909EV | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ms919-update-licentie" target="_blank" rel="noopener">Autel MaxiSys MS919 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-pro-update-licentie" target="_blank" rel="noopener">Autel MaxiSys Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ultra-ev-update-licentie" target="_blank" rel="noopener">Autel MaxiSys Ultra EV | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxisys-ultra-update-licentie" target="_blank" rel="noopener">Autel MaxiSys Ultra | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxitpms-ts608-update-licentie" target="_blank" rel="noopener">Autel MaxiTPMS TS608 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxivci-v150-lite-interface" target="_blank" rel="noopener">Autel MaxiVCI V150 Lite | Interface</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-15-pins-db15-16-pins-obd2-verloopkabel-uitleesapparaat" target="_blank" rel="noopener">Autel | 15-pins DB15 - 16-pins OBD2 Verloopkabel | Uitleesapparaat</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-audi-seat-skoda-volkswagen-2-2-pins-obd1-16-pins-obd2-verloopkabel-personenauto" target="_blank" rel="noopener">Autel | Audi/Seat/Skoda/Volkswagen 2+2-pins OBD1  - 16-pins OBD2 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-chrysler-16-pins-obd1-16-pins-obd2-adapter-personenauto" target="_blank" rel="noopener">Autel | Chrysler 16-pins OBD1 - 16-pins OBD2 Adapter | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-fiat-3-pins-obd1-16-pins-obd2-adapter-personenauto" target="_blank" rel="noopener">Autel | Fiat 3-pins OBD1 - 16-pins OBD2 Adapter | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-toyota-8a-blade-akl-kit-accessoires" target="_blank" rel="noopener">Autel | Toyota 8A Blade AKL Kit | Accessoires</a></td></tr>
+<tr><td><a href="https://astools.nl/products/bmc-euro-6-dtc-verwijderaar-vrachtwagen" target="_blank" rel="noopener">BMC (Euro 6) | DTC-verwijderaar | Vrachtwagen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/carlabimmo-bypass-gold" target="_blank" rel="noopener">CarLabImmo | Bypass Gold</a></td></tr>
+<tr><td><a href="https://astools.nl/products/carlabimmo-ferrari-maserati-key-replacement" target="_blank" rel="noopener">CarLabImmo | Ferrari Maserati Key Replacement</a></td></tr>
+<tr><td><a href="https://astools.nl/products/carlabimmo-fiat-replacement-key" target="_blank" rel="noopener">CarLabImmo | Fiat Replacement Key</a></td></tr>
+<tr><td><a href="https://astools.nl/products/carlabimmo-renault-esl-emulator" target="_blank" rel="noopener">CarLabImmo | Renault ESL | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/cat-14-pins-obd-16-pins-obd2-verloopkabel-bedrijfs-en-werkvoertuig" target="_blank" rel="noopener">CAT 14-pins OBD – 16-pins OBD2 Verloopkabel | Bedrijfs- en Werkvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/citroen-jumper-euro-6-dtc-verwijderaar-bestelauto" target="_blank" rel="noopener">Citroën (Jumper) - (Euro 6) | DTC-verwijderaar | Bestelauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/cojali-7-pins-type-n-iso-1185-spiraalkabel-trailer" target="_blank" rel="noopener">Cojali (2260104) | 7-pins Type-N (ISO 1185) Spiraalkabel | Trailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/cojali-wabco-7-pins-type-s-iso-3731-spiraalkabel-trailer" target="_blank" rel="noopener">Cojali (2260105) | Wabco 7-pins Type-S (ISO 3731) Spiraalkabel | Trailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/cojali-15-pins-7-pins-type-s-n-spiraalkabel-trailer" target="_blank" rel="noopener">Cojali (2260108) | 15-pins - 7-pins Type-S/N Spiraalkabel | Trailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/cojali-15-pins-type-s-n-spiraalkabel-trailer" target="_blank" rel="noopener">Cojali (2260109) | 15-pins Type-S/N Spiraalkabel | Trailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/cojali-wabco-7-pins-ebs-iso-7638-spiraalkabel-trailer" target="_blank" rel="noopener">Cojali (2260113) | Wabco 7-pins EBS (ISO 7638) Spiraalkabel | Trailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/cojali-mercedes-15-pins-7-pins-type-s-n-spiraalkabel-trailer" target="_blank" rel="noopener">Cojali (2260135) | Mercedes 15-pins - 7-pins Type-S/N Spiraalkabel | Trailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/cojali-iveco-7-pins-15-pins-type-s-n-spiraalkabel-trailer" target="_blank" rel="noopener">Cojali (2260136) | Iveco 7-pins - 15-pins Type-S/N Spiraalkabel | Trailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/daf-euro-5-dtc-verwijderaar-vrachtwagen" target="_blank" rel="noopener">DAF (Euro 5) | DTC-verwijderaar | Vrachtwagen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/daf-xf-xg-euro-6-2-dtc-verwijderaar-vrachtwagen" target="_blank" rel="noopener">DAF (XF-XG) - (Euro 6.2) | DTC-verwijderaar | Vrachtwagen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/delphi-ds150e-26-pins-db26-16-pins-obd2-verloopkabel-interface" target="_blank" rel="noopener">Delphi DS150E 26-pins DB26 - 16-pins OBD2 Verloopkabel | Interface</a></td></tr>
+<tr><td><a href="https://astools.nl/products/deutz-euro-6-dtc-verwijderaar-verbrandingsmotor" target="_blank" rel="noopener">Deutz (Euro 6) | DTC-verwijderaar | Verbrandingsmotor</a></td></tr>
+<tr><td><a href="https://astools.nl/products/fiat-bypass-emergency-start-tool" target="_blank" rel="noopener">Fiat Bypass - Emergency Start Tool</a></td></tr>
+<tr><td><a href="https://astools.nl/products/hwaut-qdb-3a-automobile-actuator-drive-detector-pwm-stappenmotor-tester" target="_blank" rel="noopener">HWAUT QDB-3A | Actuatortester</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-ats-support-licentie-cv" target="_blank" rel="noopener">Jaltest (29069) | CV | ATS Support</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-29701-etm-update-licentie" target="_blank" rel="noopener">Jaltest (29701) | ETM | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-adas-update-licentie" target="_blank" rel="noopener">Jaltest (29787) | ADAS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-29788-adas-update-licentie" target="_blank" rel="noopener">Jaltest (29788) | ADAS | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-ats-support-licentie-mhe" target="_blank" rel="noopener">Jaltest (29806) | MHE | ATS Support</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-led-hoofdlamp" target="_blank" rel="noopener">Jaltest (50003002) | Hoofdlamp (LED)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-led-handlamp" target="_blank" rel="noopener">Jaltest (50003004) | Handlamp (LED)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-led-werklamp" target="_blank" rel="noopener">Jaltest (50003005) | Werklamp (LED)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-testkabelset-multimeter" target="_blank" rel="noopener">Jaltest (50003008) | Testkabelset | Accessoires</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-cv-ohw-kit-hardware-compacte-koffer" target="_blank" rel="noopener">Jaltest (70001052) | CV/OHW Kit Hardware Compacte Koffer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-marine-kit-hardware-compacte-koffer" target="_blank" rel="noopener">Jaltest (70001053) | Marine Kit Hardware Compacte Koffer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-agv-kit-hardware-compacte-koffer" target="_blank" rel="noopener">Jaltest (70001060) | AGV Kit Hardware Compacte Koffer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-mhe-kit-hardware-compacte-koffer" target="_blank" rel="noopener">Jaltest (70301001) | MHE Kit Hardware Compacte Koffer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-agv-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604001) | AGV | Info Web (Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-ohw-jaltest-gebruikers-1" target="_blank" rel="noopener">Jaltest (70604003) | OHW | Info Web (Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-mhe-jaltest-gebruikers-kopie" target="_blank" rel="noopener">Jaltest (70604007) | MHE | Info Web (Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70604025-agv-info-web-niet-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604011) | AGV | Info Web (Niet-Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-ohw-niet-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604013) | OHW | Info Web (Niet-Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70604017-mhe-info-web-niet-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604017) | MHE | Info Web (Niet-Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70604023-marine-info-web-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604023) | Marine | Info Web (Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-marine-niet-jaltest-gebruikers-1" target="_blank" rel="noopener">Jaltest (70604024) | Marine | Info Web (Niet-Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-agv-niet-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604025) | AGV | Info Web (Niet-Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-marine-niet-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604028) | Marine | Info Web (Niet-Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-mhe-niet-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604029) | MHE | Info Web (Niet-Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-ohw-niet-jaltest-gebruikers-1" target="_blank" rel="noopener">Jaltest (70604030) | OHW | Info Web (Niet-Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70604031-agv-info-web-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604031) | AGV | Info Web (Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-marine-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604034) | Marine | Info Web (Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-mhe-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604035) | MHE | Info Web (Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-ohw-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604036) | OHW | Info Web (Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70604038-cv-info-web-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604037) | CV | Info Web (Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-cv-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604038) | CV | Info Web (Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70604041-cv-agv-ohw-info-web-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604040) | CV+AGV+OHW | Info Web (Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-cv-agv-ohw-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604041) | CV+AGV+OHW | Info Web (Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70604043-cv-info-web-niet-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604043) | CV | Info Web (Niet-Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-cv-niet-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604044) | CV | Info Web (Niet-Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-cv-agv-ohw-niet-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest (70604046) | CV+AGV+OHW | Info Web (Niet-Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-info-web-licentie-cv-agv-ohw-niet-jaltest-gebruikers-kopie" target="_blank" rel="noopener">Jaltest (70604047) | CV+AGV+OHW | Info Web (Niet-Jaltest Gebruikers)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70605005-info-plus" target="_blank" rel="noopener">Jaltest (70605005) | Info Plus</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-modulaire-truck-info-plus-licentie" target="_blank" rel="noopener">Jaltest (70605007) | Vrachtwagen (Modulair) | Info Plus</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-modulaire-trailer-info-plus-licentie" target="_blank" rel="noopener">Jaltest (70605009) | Trailer (Modulair) | Info Plus</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-modulaire-bus-info-plus-licentie" target="_blank" rel="noopener">Jaltest (70605011) | Autobus (Modulair) | Info Plus -</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-modulaire-lcv-info-plus-licentie" target="_blank" rel="noopener">Jaltest (70605013) | LCV (Modulair) | Info Plus</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70605015-truck-select-info-plus" target="_blank" rel="noopener">Jaltest (70605015) | Truck Select | Info Plus</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-fca-security-gateway-licentie" target="_blank" rel="noopener">Jaltest (70607001) | FCA SGW | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-iveco-sgw-activeringslicenties-bedrijf" target="_blank" rel="noopener">Jaltest (70607002) | Iveco SGW (Bedrijf) | Software-activatie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-iveco-sgw-activeringslicenties-apparaat" target="_blank" rel="noopener">Jaltest (70607003) | Iveco SGW (Apparaat) | Software-activatie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-ats-support-licentie-ohw" target="_blank" rel="noopener">Jaltest (70803004) | OHW | ATS Support</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-ats-support-licentie-multi-purpose-vehicles" target="_blank" rel="noopener">Jaltest (70807004) | Multi-Purpose Vehicles | ATS Support</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-ats-support-licentie-agv-mhe" target="_blank" rel="noopener">Jaltest (70809004) | AGV+MHE | ATS Support</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70901002-oem-rmi-daf-software-licentie-1" target="_blank" rel="noopener">Jaltest (70901002) | OEM RMI DAF | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70901003-oem-rmi-daf-software-licentie" target="_blank" rel="noopener">Jaltest (70901003) | OEM RMI DAF | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70901006-oem-rmi-iveco-software-licentie" target="_blank" rel="noopener">Jaltest (70901006) | OEM RMI Iveco | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70901007-oem-rmi-iveco-software-licentie" target="_blank" rel="noopener">Jaltest (70901007) | OEM RMI Iveco | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70901010-oem-rmi-scania-software-licentie" target="_blank" rel="noopener">Jaltest (70901010) | OEM RMI Scania | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70901011-oem-rmi-scania-software-licentie" target="_blank" rel="noopener">Jaltest (70901011) | OEM RMI Scania | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70901022-oem-rmi-man-software-licentie" target="_blank" rel="noopener">Jaltest (70901022) | OEM RMI MAN | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-70901023-oem-rmi-man-software-licentie" target="_blank" rel="noopener">Jaltest (70901023) | OEM RMI MAN | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-knorr-bremse-activeringslicentie-add-on" target="_blank" rel="noopener">Jaltest (71502007) | Knorr-Bremse (Add-on) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-knorr-bremse-activeringslicentie" target="_blank" rel="noopener">Jaltest (71502008) | Knorr-Bremse | Software-activatie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-71502018-cv-commercial-vehicles-software-licentie" target="_blank" rel="noopener">Jaltest (71502018) | CV (Commercial Vehicles) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-knorr-bremse-update-licentie-add-on" target="_blank" rel="noopener">Jaltest (71602007) | Knorr-Bremse (Add-on) | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-knorr-bremse-update-licentie" target="_blank" rel="noopener">Jaltest (71602011) | Knorr-Bremse | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-73501007-agv-agricultural-software-licentie" target="_blank" rel="noopener">Jaltest (73501007) | AGV (Agricultural) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-74001012-multi-purpose-vehicle-module-software-licentie" target="_blank" rel="noopener">Jaltest (74001012) | Multi-Purpose Vehicle (Module) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-73501007-ohw-off-highway-software-licentie" target="_blank" rel="noopener">Jaltest (74001014) | OHW (Off-Highway) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-74502012-marine-vessel-software-licentie" target="_blank" rel="noopener">Jaltest (74502012) | Marine (Vessel) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-74502013-marine-full-software-licentie" target="_blank" rel="noopener">Jaltest (74502013) | Marine (Full) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-74502014-marine-buitenboord-software-licentie" target="_blank" rel="noopener">Jaltest (74502014) | Marine (Buitenboord) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-74502015-marine-binnenboord-software-licentie" target="_blank" rel="noopener">Jaltest (74502015) | Marine (Binnenboord) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-74502017-marine-jetski-software-licentie" target="_blank" rel="noopener">Jaltest (74502017) | Marine (Jetski) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-74602011-marine-benzinemotor-software-licentie" target="_blank" rel="noopener">Jaltest (74602011) | Marine (Benzinemotor) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-75001009-mhe-material-handling-equipment-software-licentie" target="_blank" rel="noopener">Jaltest (75001009) | MHE (Material Handling Equipment) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-75201004-gse-ground-support-software-activatie" target="_blank" rel="noopener">Jaltest (75201004) | GSE (Ground Support) | Software-activatie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-75201005-gse-ground-support-software-licentie" target="_blank" rel="noopener">Jaltest (75201005) | GSE (Ground Support) | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-75301002-mhe-material-handling-equipment-update-licentie" target="_blank" rel="noopener">Jaltest (75301002) | GSE (Ground Support) | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-iveco-sgw-verlengingslicentie-bedrijf" target="_blank" rel="noopener">Jaltest (78500001) | Iveco SGW (Bedrijf) | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-iveco-sgw-verlengingslicentie-apparaat" target="_blank" rel="noopener">Jaltest (78500002) | Iveco SGW (Apparaat) | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jdc213e1-ethernet-verloopkabel" target="_blank" rel="noopener">Jaltest (JDC213E1) | Ethernet - Verloopkabel</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jdc408a-renault-nissan-16-32-pins-sgw-16-pins-obd2-verloopkabel" target="_blank" rel="noopener">Jaltest (JDC408A) | Renault/Nissan 16+32-pins SGW - 16-pins OBD2 Verloopkabel</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jdc572-9-hyundai-ce-series-9-pins-obd-26-pins-db26-verloopkabel-terrein-en-bouwmachine" target="_blank" rel="noopener">Jaltest (JDC572.9) | Hyundai (CE series) 9-pins OBD - 26-pins DB26 Verloopkabel | Terrein- en Bouwmachine</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jdc574a9-crown-6-pins-obd-16-pins-obd2-verloopkabel-hef-en-hijswerktuigen" target="_blank" rel="noopener">Jaltest (JDC574A9) | Crown 6-pins OBD - 16-pins OBD2 Verloopkabel | Hef- en Hijswerktuigen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jdc633a-tohatsu-6-pins-obd-16-pins-obd2-verloopkabel-verbrandingsmotor" target="_blank" rel="noopener">Jaltest (JDC633A) | Tohatsu 6-pins OBD - 16-pins OBD2 Verloopkabel | Verbrandingsmotor</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-cummins-4-60-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">Jaltest (JDCM2150) | Cummins (ECU) 4+60-pins – 16-pins OBD2 Verloopkabel | Bedrijfsvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-cummins-60-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">Jaltest (JDCM2250) | Cummins (ECU) 60-pins – 16-pins OBD2 Verloopkabel | Bedrijfsvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-cummins-96-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">Jaltest (JDCM2350/2450) | Cummins (ECU) 96-pins – 16-pins OBD2 Verloopkabel | Bedrijfsvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-cummins-94-96-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">Jaltest (JDCM2670/2880) | Cummins (ECU) 94+96-pins – 16-pins OBD2 Verloopkabel | Bedrijfsvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-cummins-4-50-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig-1" target="_blank" rel="noopener">Jaltest (JDCM850) | Cummins (ECU) 4+50-pins – 16-pins OBD2 Verloopkabel | Bedrijfsvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jt2001-multimeter" target="_blank" rel="noopener">Jaltest JT2001 | Multimeter</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jt2002-multimeter" target="_blank" rel="noopener">Jaltest JT2002 | Multimeter</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jt2003-multimeter" target="_blank" rel="noopener">Jaltest JT2003 | Multimeter</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jt2004-stroomtang" target="_blank" rel="noopener">Jaltest JT2004 | Stroomtang</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jt2008-tachometer" target="_blank" rel="noopener">Jaltest JT2008 | Tachometer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-truck-select-brands-software-licentie" target="_blank" rel="noopener">Jaltest | Truck Select Brands | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-truck-select-brands-update-licentie" target="_blank" rel="noopener">Jaltest | Truck Select Brands | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-bmw-immo-off-eslelv-emulator" target="_blank" rel="noopener">Julie BMW | IMMO OFF &amp; ESL/ELV | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-fiat-immo-off-emulator-1" target="_blank" rel="noopener">Julie Fiat | IMMO OFF | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-ford-mazda-immo-off-emulator" target="_blank" rel="noopener">Julie Ford/Mazda | IMMO OFF | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-japan-korea-immo-off-emulator" target="_blank" rel="noopener">Julie Japan Korea | IMMO OFF | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-mercedes-immo-off-esl-elv-emulator" target="_blank" rel="noopener">Julie Mercedes | IMMO OFF &amp; ESL/ELV | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-psa-immo-off-emulator" target="_blank" rel="noopener">Julie PSA | IMMO OFF | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-renault-nissan-immo-off-eslelv-emulator" target="_blank" rel="noopener">Julie Renault/Nissan | IMMO OFF &amp; ESL/ELV | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-toyota-immo-off-emulator" target="_blank" rel="noopener">Julie Toyota | IMMO OFF | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-vag-immo-off-emulator-gqfsc" target="_blank" rel="noopener">Julie VAG | IMMO OFF | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-volvo-scl-3-scl-esl-emulator" target="_blank" rel="noopener">Julie VOLVO SCL 3 | SCL/ESL | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-24c02-eeprom-memory-adapter-pro-v121-v123" target="_blank" rel="noopener">Julie | 24C02 EEPROM Memory Adapter | PRO V121/V123</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-airbag-tacho-testing-emulator" target="_blank" rel="noopener">Julie | Airbag &amp; Tacho | Testing Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-send-data-memory-adapter-accessoires" target="_blank" rel="noopener">Julie | Send Data + Memory Adapter | Accessoires</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-crp129-hd-uitleesapparaat-vrachtwagen" target="_blank" rel="noopener">Launch CRP129 HD | Uitleesapparaat | Vrachtwagen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-crp129-hd-update-licentie" target="_blank" rel="noopener">Launch CRP129 HD | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-creader-professional-crp429-update-licentie" target="_blank" rel="noopener">Launch CRP429 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-creader-professional-crp429c-update-licentie-1" target="_blank" rel="noopener">Launch CRP429C | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-creader-professional-crp909e-update-licentie" target="_blank" rel="noopener">Launch CRP909E | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-creader-professional-crp909x-update-licentie-1" target="_blank" rel="noopener">Launch CRP909X | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-crp919e-bt-update-licentie" target="_blank" rel="noopener">Launch CRP919E BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-crp919x-bt-update-licentie" target="_blank" rel="noopener">Launch CRP919X BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-ltr-05-rf-sensor-aluminium-tpms-sensor" target="_blank" rel="noopener">Launch LTR-05 RF-Sensor (Aluminium) | TPMS-sensor (Screw-in)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-diagun-v-update-licentie" target="_blank" rel="noopener">Launch X-431 Diagun V | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-hd-iii-update-licentie" target="_blank" rel="noopener">Launch X-431 HD III | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-immo-elite-update-licentie" target="_blank" rel="noopener">Launch X-431 IMMO Elite | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-immo-plus-update-licentie" target="_blank" rel="noopener">Launch X-431 IMMO Plus | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-pad-iii-update-licentie" target="_blank" rel="noopener">Launch X-431 PAD III | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-pad-v-update-licentie" target="_blank" rel="noopener">Launch X-431 PAD V | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-pad-vii-update-licentie" target="_blank" rel="noopener">Launch X-431 PAD VII | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-pro-5-auto-uitleesapparaat" target="_blank" rel="noopener">Launch X-431 Pro 5 | Uitleesapparaat | Auto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-pro-5-update-licentie" target="_blank" rel="noopener">Launch X-431 Pro 5 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-pro-mini-3-update-licentie" target="_blank" rel="noopener">Launch X-431 Pro Mini 3 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-pro-v-update-licentie" target="_blank" rel="noopener">Launch X-431 Pro V | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-pros-elite-update-licentie" target="_blank" rel="noopener">Launch X-431 ProS Elite | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-pros-mini-update-licentie" target="_blank" rel="noopener">Launch X-431 ProS Mini | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-pros-v-update-licentie" target="_blank" rel="noopener">Launch X-431 ProS V | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-v-hd-iii-update-licentie" target="_blank" rel="noopener">Launch X-431 V+ / HD III | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-v-update-licentie" target="_blank" rel="noopener">Launch X-431 V+ | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-keyprogrammer-accessoires" target="_blank" rel="noopener">Launch | KeyProgrammer | Accessoires</a></td></tr>
+<tr><td><a href="https://astools.nl/products/mbito-credits" target="_blank" rel="noopener">MBito Credits</a></td></tr>
+<tr><td><a href="https://astools.nl/products/mercedes-euro-6-dtc-verwijderaar-vrachtwagen" target="_blank" rel="noopener">Mercedes (Euro 6) | DTC-verwijderaar | Vrachtwagen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/mercedes-sprinter-euro-6-dtc-verwijderaar-bestelauto" target="_blank" rel="noopener">Mercedes (Sprinter) - (Euro 6) | DTC-verwijderaar | Bestelauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdeleven-3" target="_blank" rel="noopener">OBDeleven 3</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdeleven-3-pro-pack-100-credits" target="_blank" rel="noopener">OBDeleven 3 + 100 Credits</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdeleven-3-pro-pack" target="_blank" rel="noopener">OBDeleven 3 PRO Pack + 100 Credits</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdeleven-3-ultimate-pack" target="_blank" rel="noopener">OBDeleven 3 ULTIMATE Pack</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdeleven-pro-vag-plan-software-licentie" target="_blank" rel="noopener">OBDeleven | Pro VAG Plan | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdeleven-ultimate-plan-software-licentie" target="_blank" rel="noopener">OBDeleven | Ultimate Plan | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdeleven-ultimate-vag-plan-software-licentie" target="_blank" rel="noopener">OBDeleven | Ultimate VAG Plan | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-m001b" target="_blank" rel="noopener">OBDSTAR (M001B) | 15-pins DB15 - 16-pins OBD2 Verloopkabel</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-accuklemmen-voedingskabel" target="_blank" rel="noopener">OBDSTAR (M002) | Accuklemmen Voedingskabel | Accessoires</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-m002d" target="_blank" rel="noopener">OBDSTAR (M002D) | Accuklemmen Voedingskabel | Accessoires</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-m088" target="_blank" rel="noopener">OBDSTAR (M088) | Tohatsu 6-pins OBD – 16-pins OBD2 Verloopkabel | Motorboot</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-tcm-012" target="_blank" rel="noopener">OBDSTAR (TCM-012) | Siemens (VGS2-NAG2/VGS3-NAG2) 6-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-c4-02-adapter" target="_blank" rel="noopener">OBDSTAR C4-02 Adapter | Accessoires</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-dc706-update-licentie" target="_blank" rel="noopener">OBDSTAR DC706 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-dp-update-licentie" target="_blank" rel="noopener">OBDSTAR DP Plus C | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-ecu-master-programmeur" target="_blank" rel="noopener">OBDSTAR ECU Master | Programmeur</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-aprilia-uitleesapparaat-snorfiets-motorfiets" target="_blank" rel="noopener">OBDSTAR IScan Aprilia | Uitleesapparaat | Snorfiets/Motorfiets</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-benelli-uitleesapparaat-motorfiets" target="_blank" rel="noopener">OBDSTAR IScan Benelli | Uitleesapparaat | Motorfiets</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-iscan-cfmoto-uitleesapparaat-motorfiets" target="_blank" rel="noopener">OBDSTAR IScan CFMOTO | Uitleesapparaat | Motorfiets</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-gilera-uitleesapparaat-snorfiets-motorfiets" target="_blank" rel="noopener">OBDSTAR IScan Gilera | Uitleesapparaat | Snorfiets/Motorfiets</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-suzuki-uitleesapparaat-motorfiets" target="_blank" rel="noopener">OBDSTAR IScan Suzuki | Uitleesapparaat | Motorfiets</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-vespa-uitleesapparaat-snorfiets-motorfiets" target="_blank" rel="noopener">OBDSTAR IScan Vespa | Uitleesapparaat | Snorfiets/Motorfiets</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-iscan-update-licentie" target="_blank" rel="noopener">OBDSTAR IScan | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-key-master-5-update-licentie" target="_blank" rel="noopener">OBDSTAR Key Master 5 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-g3-airbag-reset-software-licentie" target="_blank" rel="noopener">OBDSTAR KeyMaster G3 | Airbag Reset | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-g3-ecu-flasher-software-licentie" target="_blank" rel="noopener">OBDSTAR KeyMaster G3 | ECU Flasher | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-g3-odo-meter-software-licentie" target="_blank" rel="noopener">OBDSTAR KeyMaster G3 | ODO Meter | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-g3-test-platform-software-licentie" target="_blank" rel="noopener">OBDSTAR KeyMaster G3 | Test Platform | Software-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-mk70-update-licentie" target="_blank" rel="noopener">OBDSTAR MK70 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-motomaster-update-licentie" target="_blank" rel="noopener">OBDSTAR MotoMaster | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-m50-update-licentie" target="_blank" rel="noopener">OBDSTAR MS50 Basic | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-ms50-std-update-licentie" target="_blank" rel="noopener">OBDSTAR MS50 STD | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-ms70-update-licentie" target="_blank" rel="noopener">OBDSTAR MS70 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-ms80-basic-update-licentie" target="_blank" rel="noopener">OBDSTAR MS80 Basic | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-ms80-std-update-licentie" target="_blank" rel="noopener">OBDSTAR MS80 STD | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-odo-master-update-licentie" target="_blank" rel="noopener">OBDSTAR ODO Master | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-p50-update-licentie" target="_blank" rel="noopener">OBDSTAR P50 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-x300-mini-update-licentie" target="_blank" rel="noopener">OBDSTAR X300 Mini | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-15-pins-db15-16-pins-obd2-verloopadapter-interface" target="_blank" rel="noopener">OBDSTAR | Converter V2 | Interface</a></td></tr>
+<tr><td><a href="https://astools.nl/products/otofix-d1-lite-update-licentie" target="_blank" rel="noopener">OTOFIX D1 Lite | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/otofix-d1-max-update-licentie" target="_blank" rel="noopener">OTOFIX D1 Max | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/otofix-d1-pro-update-licentie" target="_blank" rel="noopener">OTOFIX D1 Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/otofix-d1-update-licentie" target="_blank" rel="noopener">OTOFIX D1 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/otofix-evoscan-update-licentie" target="_blank" rel="noopener">OTOFIX EvoScan Ultra | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/otofix-im1-update-licentie" target="_blank" rel="noopener">OTOFIX IM1 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/otofix-im2-update-licentie" target="_blank" rel="noopener">OTOFIX IM2 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-artidiag-100-update-licentie" target="_blank" rel="noopener">Topdon ArtiDiag 100 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-artidiag-600-elite-update-licentie" target="_blank" rel="noopener">Topdon ArtiDiag 600 Elite | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-artidiag-700-update-licentie" target="_blank" rel="noopener">Topdon ArtiDiag 700 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-artidiag-800-update-licentie" target="_blank" rel="noopener">Topdon ArtiDiag 800 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-artidiag-900-bt-update-licentie" target="_blank" rel="noopener">Topdon ArtiDiag 900 BT | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-artidiag-900-lite-update-licentie" target="_blank" rel="noopener">Topdon ArtiDiag 900 Lite | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-artidiag-moto-update-licentie" target="_blank" rel="noopener">Topdon ArtiDiag Moto | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-artidiag-pro-update-licentie" target="_blank" rel="noopener">Topdon ArtiDiag Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-artipad-i-update-licentie" target="_blank" rel="noopener">Topdon ArtiPad I | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-carpal-update-licentie" target="_blank" rel="noopener">Topdon CarPal | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-ev-software-pakket-update-licentie" target="_blank" rel="noopener">Topdon EV Software Pakket | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-hd-software-licentie" target="_blank" rel="noopener">Topdon HD | Software-licentie (1 jaar)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-phoenix-elite-update-licentie" target="_blank" rel="noopener">Topdon Phoenix Elite | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-phoenix-lite-2-update-licentie" target="_blank" rel="noopener">Topdon Phoenix Lite 2 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-phoenix-lite-3-update-licentie" target="_blank" rel="noopener">Topdon Phoenix Lite 3 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-phoenix-max-update-licentie" target="_blank" rel="noopener">Topdon Phoenix Max | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-phoenix-nano-update-licentie" target="_blank" rel="noopener">Topdon Phoenix Nano | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-phoenix-plus-update-licentie" target="_blank" rel="noopener">Topdon Phoenix Plus | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-phoenix-pro-update-licentie" target="_blank" rel="noopener">Topdon Phoenix Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-phoenix-smart-update-licentie" target="_blank" rel="noopener">Topdon Phoenix Smart | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-phoenix-xlink-update-licentie" target="_blank" rel="noopener">Topdon Phoenix XLink | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-t-ninja-1000-update-licentie" target="_blank" rel="noopener">Topdon T-Ninja 1000 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-t-ninja-pro-update-licentie" target="_blank" rel="noopener">Topdon T-Ninja Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-t-ninja-t1000-update-licentie" target="_blank" rel="noopener">Topdon T-Ninja T1000 | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-topscan-master-update-licentie" target="_blank" rel="noopener">Topdon TopScan Master | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-topscan-moto-update-licentie" target="_blank" rel="noopener">Topdon TopScan Moto | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-topscan-pro-update-licentie" target="_blank" rel="noopener">Topdon TopScan Pro | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-tp48-tpms-programmeur" target="_blank" rel="noopener">Topdon TP48 | TPMS-programmeur</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-ultradiag-moto-update-licentie" target="_blank" rel="noopener">Topdon UltraDiag Moto | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-ultradiag-update-licentie" target="_blank" rel="noopener">Topdon UltraDiag | Update-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-fca-sgw-licentie" target="_blank" rel="noopener">Topdon | FCA (SGW) | Autorisatie-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-sgw-multi-acces-bundel-autorisatie-licentie" target="_blank" rel="noopener">Topdon | SGW Multi-Acces Bundel | Autorisatie-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-topscan-moto-3-in-1-kabelpakket-accessoires" target="_blank" rel="noopener">Topdon | TopScan Moto 3-in-1 Kabelpakket | Accessoires</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-vag-sfd-sgw-autorisatie-licentie" target="_blank" rel="noopener">Topdon | VAG SFD (SGW) | Autorisatie-licentie</a></td></tr>
+<tr><td><a href="https://astools.nl/products/24v-12v-transformator-obd2-adapter" target="_blank" rel="noopener">Transformatoradapter OBD2 (24V/12V)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/universele-sid212-dtc-verwijderaar" target="_blank" rel="noopener">Universele (SID212) | DTC-verwijderaar</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt01271-fiat-1-2-1-4l-16v-timingset-5-delig" target="_blank" rel="noopener">VT01271 | Fiat - 1.2 (16V) | Timingset (5-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt01608-lambdasonde-doppenset-21-delig" target="_blank" rel="noopener">VT01608 | Lambdasonde-doppenset (21-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt01704-citroen-mini-peugeot-1-4-1-6l-timingset-10-delig" target="_blank" rel="noopener">VT01704 | Citroën/MINI/Peugeot - 1.4/1.6L | Timingset (10-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt01712b-bmw-alpina-wiesmann-n63-s63-timingset-6-delig" target="_blank" rel="noopener">VT01712B | BMW - N63 | Timingset (6-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt13898-opel-2-0l-cdti-ecoflex-timingset-15-delig" target="_blank" rel="noopener">VT13898 | Opel - 2.0L (CDTi/EcoFLEX) | Timingset (15-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt18190d-jaguar-land-rover-2-0l-ingenium-diesel-timingset-11-delig" target="_blank" rel="noopener">VT18190D | Jaguar/Land Rover (Ingenium Diesel) - 2.0L | Timingset (11-delig)</a></td></tr></table></div></details>
+
+<details><summary>Uitverkocht maar wel zichtbaar in de shop <span class="tel">61 producten</span></summary>
+<div class="tabelwrap"><table><tr><td><a href="https://astools.nl/products/autel-dv2027-accu" target="_blank" rel="noopener">Autel DV2027 | Accu</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxiim-im608-ii-auto-sleutelprogrammeur" target="_blank" rel="noopener">Autel IM608 II | Sleutelprogrammeur | Auto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-maxivci-v150-interface" target="_blank" rel="noopener">Autel MaxiVCI V150 | Interface</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-mx-sensor-433mhz-aluminium-tpms-screw-in" target="_blank" rel="noopener">Autel MX-Sensor 433MHZ (Aluminium) | TPMS-sensor (Screw-in)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-pl5080112-accu" target="_blank" rel="noopener">Autel PL5080112 | Accu</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-fiat-3-pins-obd1-16-pins-obd2-adapter-personenauto" target="_blank" rel="noopener">Autel | Fiat 3-pins OBD1 - 16-pins OBD2 Adapter | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autel-toyota-8a-blade-akl-kit-accessoires" target="_blank" rel="noopener">Autel | Toyota 8A Blade AKL Kit | Accessoires</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autool-lm120-aircomanometer" target="_blank" rel="noopener">Autool LM120 | Aircomanometer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/autool-tg501-lakdiktemeter" target="_blank" rel="noopener">Autool TG501 | Lakdiktemeter</a></td></tr>
+<tr><td><a href="https://astools.nl/products/carlabimmo-bypass-gold" target="_blank" rel="noopener">CarLabImmo | Bypass Gold</a></td></tr>
+<tr><td><a href="https://astools.nl/products/carlabimmo-renault-esl-emulator" target="_blank" rel="noopener">CarLabImmo | Renault ESL | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/daf-euro-5-dtc-verwijderaar-vrachtwagen" target="_blank" rel="noopener">DAF (Euro 5) | DTC-verwijderaar | Vrachtwagen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/godiag-gt100-plus-breakout-box" target="_blank" rel="noopener">GoDiag GT100 Plus | Breakout Box | Accessoires</a></td></tr>
+<tr><td><a href="https://astools.nl/products/godiag-gt109-interfacekabel" target="_blank" rel="noopener">GoDiag GT109 | Interfacekabel</a></td></tr>
+<tr><td><a href="https://astools.nl/products/godiag-mqb-data-collector-elv-tcm-dsg-versnellingsbakadapter" target="_blank" rel="noopener">GoDiag | MQB Data Collector (ELV/TCM-DSG) Versnellingsbakadapter | Accessoires</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-koppelvermenigvuldiger" target="_blank" rel="noopener">Jaltest (50007001) | Koppelvermenigvuldiger | Velgengereedschap</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-thermo-king-carrier-5-pins-obd-26-pins-db26-verloopkabel-koeltrailer-1" target="_blank" rel="noopener">Jaltest (JDC113.9) | Thermo King/Carrier 5-pins OBD - 26-pins DB26 Verloopkabel | Koeltrailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-carrier-3-pins-obd-26-pins-db26-verloopkabel-koeltrailer" target="_blank" rel="noopener">Jaltest (JDC115.9) | Carrier 3-pins OBD - 26-pins DB26 Verloopkabel | Koeltrailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-carrier-3-pins-obd-16-pins-obd2-verloopkabel-koeltrailer" target="_blank" rel="noopener">Jaltest (JDC121A9) | Carrier 3-pins OBD - 16-pins OBD2 Verloopkabel | Koeltrailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-link-v9-26-pins-db26-16-pins-obd2-verloopkabel-interface" target="_blank" rel="noopener">Jaltest (JDC213.9) | Link V9 26-pins DB26 – 16-pins OBD2 Verloopkabel | Interface</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jdc213e1-ethernet-verloopkabel" target="_blank" rel="noopener">Jaltest (JDC213E1) | Ethernet - Verloopkabel</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-cummins-96-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">Jaltest (JDCM2350/2450) | Cummins (ECU) 96-pins – 16-pins OBD2 Verloopkabel | Bedrijfsvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-merlo-servicesleutel-hef-en-hijswerktuigen-1" target="_blank" rel="noopener">Jaltest (JSK01) | Merlo Servicesleutel | Hef- en Hijswerktuigen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jdiag-m300-uitleesapparaat-motorfiets" target="_blank" rel="noopener">JDiag M300 | Uitleesapparaat | Motorfiets</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-fiat-immo-off-emulator-1" target="_blank" rel="noopener">Julie Fiat | IMMO OFF | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/julie-volvo-scl-3-scl-esl-emulator" target="_blank" rel="noopener">Julie VOLVO SCL 3 | SCL/ESL | Emulator</a></td></tr>
+<tr><td><a href="https://astools.nl/products/launch-x-431-pro-dyno-auto-uitleesapparaat" target="_blank" rel="noopener">Launch X-431 Pro Dyno | Uitleesapparaat | Auto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/mini-vci-j2534-obd2-usb-interfacekabel" target="_blank" rel="noopener">MINI-VCI J2534 | Interfacekabel</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdeleven-3-pro-pack-100-credits" target="_blank" rel="noopener">OBDeleven 3 + 100 Credits</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-kawasaki-8-pins-obd-16-pins-obd2-verloopkabel-motorfiets" target="_blank" rel="noopener">OBDSTAR (M011) | Kawasaki 8-pins OBD – 16-pins OBD2 Verloopkabel | Motorfiets</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-mv-agusta-4-pins-obd-16-pins-obd2-verloopkabel-motorfiets" target="_blank" rel="noopener">OBDSTAR (M038) | MV Agusta 4-pins OBD – 16-pins OBD2 Verloopkabel | Motorfiets</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-evinrude-3-pins-obd-16-pins-obd2-verloopkabel-motorboot" target="_blank" rel="noopener">OBDSTAR (M065) | Evinrude 3-pins OBD – 16-pins OBD2 Verloopkabel | Motorboot</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-mercruiser-10-pins-obd-16-pins-obd2-verloopkabel-motorboot" target="_blank" rel="noopener">OBDSTAR (M072) | Universele 10-pins OBD – 16-pins OBD2 Verloopkabel | Motorboot</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-cummins-9-pins-obd-16-pins-obd2-verloopkabel-motorboot" target="_blank" rel="noopener">OBDSTAR (M083) | Universele 9-pins OBD - 16-pins OBD2 Verloopkabel | Motorboot</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-volvo-penta-6-pins-obd-16-pins-obd2-verloopkabel-motorboot" target="_blank" rel="noopener">OBDSTAR (M086) | Volvo Penta 6-pins OBD – 16-pins OBD2 Verloopkabel | Verbrandingsmotor</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-royal-enfield-6-pins-obd-16-pins-obd2-adapter-motorfiets" target="_blank" rel="noopener">OBDSTAR (N052) | Royal Enfield 6-pins OBD – 16-pins OBD2 Adapter | Motorfiets</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-16-pins-tcm-15-pins-db15-verloopkabel-personenauto-2" target="_blank" rel="noopener">OBDSTAR (TCM-021) | ZF (6HP19/21/26/28/32) 16-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-16-pins-tcm-15-pins-db15-verloopkabel-personenauto-1" target="_blank" rel="noopener">OBDSTAR (TCM-022) | Continental (6HP) 16-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-16-pins-tcm-15-pins-db15-verloopkabel-personenauto-tcm-024" target="_blank" rel="noopener">OBDSTAR (TCM-024) | ZF (8HP45-TC277) 16-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-iscan-pro-indmar-marine-uitleesapparaat-motorboot" target="_blank" rel="noopener">OBDSTAR IScan Pro Indmar (Marine) | Uitleesapparaat | Motorboot</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-iscan-sea-doo-marine-uitleesapparaat-motorboot" target="_blank" rel="noopener">OBDSTAR iScan Sea-Doo (Marine) | Uitleesapparaat | Motorboot</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-key-master-5-full-sleutelprogrammeur" target="_blank" rel="noopener">OBDSTAR Key Master 5 | Sleutelprogrammeur (Full)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-keymaster-g3-multifunctionele-programmeur" target="_blank" rel="noopener">OBDSTAR KeyMaster G3 | Multifunctionele Programmeur</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-marine-master-uitleesapparaat-motorboot" target="_blank" rel="noopener">OBDSTAR Marine Master (A+B+C+D) | Uitleesapparaat | Motorboot</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-phoenix-lite-3-auto-uitleesapparaat" target="_blank" rel="noopener">Topdon Phoenix Lite 3 | Uitleesapparaat | Auto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-phoenix-scope-oscilloscoop-4-kanaals" target="_blank" rel="noopener">Topdon Phoenix Scope | Oscilloscoop (4-kanaals)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-rlink-x3-interfacekabel" target="_blank" rel="noopener">Topdon RLink X3 | Interfacekabel</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-tornado-t30000-druppellader" target="_blank" rel="noopener">Topdon Tornado T30000 | Druppellader</a></td></tr>
+<tr><td><a href="https://astools.nl/products/topdon-ultradiag-auto-uitleesapparaat" target="_blank" rel="noopener">Topdon UltraDiag | Uitleesapparaat | Auto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt01522-bmw-n40-n45-timingset-6-delig" target="_blank" rel="noopener">VT01522 | BMW - N40/N45 | Timingset (6-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt01540-vag-krukaskeerring-montagegereedschap" target="_blank" rel="noopener">VT01540 | VAG Krukaskeerring Montagegereedschap</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt01608-lambdasonde-doppenset-21-delig" target="_blank" rel="noopener">VT01608 | Lambdasonde-doppenset (21-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt01704-citroen-mini-peugeot-1-4-1-6l-timingset-10-delig" target="_blank" rel="noopener">VT01704 | Citroën/MINI/Peugeot - 1.4/1.6L | Timingset (10-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt01712b-bmw-alpina-wiesmann-n63-s63-timingset-6-delig" target="_blank" rel="noopener">VT01712B | BMW - N63 | Timingset (6-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt01865-vag-1-0-1-2-1-4l-tsi-timingset-6-delig" target="_blank" rel="noopener">VT01865 | VAG - 1.0/1.2/1.4L (TSI) | Timingset (6-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt13104-ford-1-0l-ecoboost-timingset-16-delig" target="_blank" rel="noopener">VT13104 | Ford - 1.0L (EcoBoost) | Timingset (16-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt13123b-mercedes-distributieketting-punchtangset-18-delig" target="_blank" rel="noopener">VT13123B | Mercedes | Distributieketting-punchtangset (18-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt14104-formeergastester" target="_blank" rel="noopener">VT14104 | Formeergastester</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vt18190d-jaguar-land-rover-2-0l-ingenium-diesel-timingset-11-delig" target="_blank" rel="noopener">VT18190D | Jaguar/Land Rover (Ingenium Diesel) - 2.0L | Timingset (11-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/vtn1098-citroen-peugeot-mini-1-4-1-6-timingset-10-delig" target="_blank" rel="noopener">VTN1098 | Citroën/Peugeot/MINI - 1.4/1.6 | Timingset (10-delig)</a></td></tr>
+<tr><td><a href="https://astools.nl/products/xhorse-key-tool-lite" target="_blank" rel="noopener">Xhorse Key Tool Lite | Sleutelprogrammeur</a></td></tr></table></div></details>
+
+<details><summary>Titel langer dan 90 tekens (wordt afgekapt in Google) <span class="tel">61 producten</span></summary>
+<div class="tabelwrap"><table><tr><td><a href="https://astools.nl/products/autel-audi-seat-skoda-volkswagen-2-2-pins-obd1-16-pins-obd2-verloopkabel-personenauto" target="_blank" rel="noopener">Autel | Audi/Seat/Skoda/Volkswagen 2+2-pins OBD1  - 16-pins OBD2 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-haldex-eb-trs-tpms-4-pins-obd-16-pins-obd2-verloopkabel-trailer" target="_blank" rel="noopener">Jaltest (JDC108A) | Haldex (EB+/TRS, TPMS) 4-pins OBD - 16-pins OBD2 Verloopkabel | Trailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-knorr-bremse-kb4-ta-abs-7-pins-obd-16-pins-obd2-verloopkabel-trailer" target="_blank" rel="noopener">Jaltest (JDC111A) | Knorr-Bremse (KB4-TA ABS) 7-pins OBD - 16-pins OBD2 Verloopkabel | Trailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-thermo-king-carrier-5-pins-obd-26-pins-db26-verloopkabel-koeltrailer-1" target="_blank" rel="noopener">Jaltest (JDC113.9) | Thermo King/Carrier 5-pins OBD - 26-pins DB26 Verloopkabel | Koeltrailer</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-volvo-8-pins-obd1-16-pins-obd2-verloopkabel-bedrijfs-en-werkvoertuig" target="_blank" rel="noopener">Jaltest (JDC201A) | Volvo 8-pins OBD1 - 16-pins OBD2 Verloopkabel | Bedrijfs- en Werkvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-mercedes-14-pins-obd1-16-pins-obd2-verloopkabel-bedrijfs-en-werkvoertuig" target="_blank" rel="noopener">Jaltest (JDC203A) | Mercedes 14-pins OBD1 - 16-pins OBD2 Verloopkabel | Bedrijfs- en Werkvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-scania-16-pins-obd1-16-pins-obd2-verloopkabel-bedrijfs-en-werkvoertuig" target="_blank" rel="noopener">Jaltest (JDC204A) | Wabco 16-pins OBD - 16-pins OBD2 Verloopkabel | Bedrijfs- en Werkvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-iveco-30-pins-obd1-16-pins-obd2-verloopkabel-bedrijfs-en-werkvoertuig" target="_blank" rel="noopener">Jaltest (JDC206A) | Iveco 30-pins OBD1 – 16-pins OBD2 Verloopkabel | Bedrijfs- en Werkvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-man-4-pins-obd1-16-pins-obd2-verloopkabel-bedrijfs-en-werkvoertuig" target="_blank" rel="noopener">Jaltest (JDC207A) | MAN 4-pins OBD1 - 16-pins OBD2 Verloopkabel | Bedrijfs- en Werkvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-man-37-pins-obd1-16-pins-obd2-verloopkabel-bedrijfs-en-werkvoertuig" target="_blank" rel="noopener">Jaltest (JDC210A) | MAN 37-pins OBD1 - 16-pins OBD2 Verloopkabel | Bedrijfs- en Werkvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-3-3-pins-j1939-16-pins-obd2-verloopkabel-bedrijfs-en-werkvoertuig" target="_blank" rel="noopener">Jaltest (JDC216A9) | 3+3-pins J1939 - 16-pins OBD2 Verloopkabel | Bedrijfs- en Werkvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-zf-ecomat-3-6-pins-obd-16-pins-obd2-verloopkabel-bedrijfs-en-werkvoertuig" target="_blank" rel="noopener">Jaltest (JDC303A) | ZF Ecomat 3+6-pins OBD - 16-pins OBD2 Verloopkabel | Bedrijfs- en Werkvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-knorr-bremse-abs-18-18-pins-obd-16-pins-obd2-verloopkabel-bedrijfsvoertuig-2" target="_blank" rel="noopener">Jaltest (JDC305A) | Knorr-Bremse (ABS) 18+18-pins OBD - 16-pins OBD2 Verloopkabel | Bedrijfsvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-iveco-secure-gateway-module-8-8-pins-16-pins-obd2-verloopkabel" target="_blank" rel="noopener">Jaltest (JDC407A) | Iveco (Daily) (SGW) 8+8-pins ST15 - 16-pins OBD2 Verloopkabel | Bestelauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-new-holland-case-ih-13-pins-obd-switch-verloopkabel-landbouwvoertuig" target="_blank" rel="noopener">Jaltest (JDC507A) | New Holland/Case IH 13-pins OBD - Switch Verloopkabel | Landbouwvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-volvo-16-pins-obd-16-pins-obd2-verloopkabel-terrein-en-bouwmachine" target="_blank" rel="noopener">Jaltest (JDC509A) | Volvo 16-pins OBD - 16-pins OBD2 Verloopkabel | Terrein- en Bouwmachine</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-deutz-fahr-same-lamborghini-14-pins-obd-16-pins-obd2-verloopkabel-landbouwvoertuig" target="_blank" rel="noopener">Jaltest (JDC512A) | Deutz-Fahr/Same/Lamborghini 14-pins OBD - 16-pins OBD2 Verloopkabel | Landbouwvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-massey-ferguson-16-pins-obd-16-pins-obd2-verloopkabel-landbouwvoertuig" target="_blank" rel="noopener">Jaltest (JDC513A) | Massey Ferguson 16-pins OBD – 16-pins OBD2 Verloopkabel | Landbouwvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-claas-renault-4-4-pins-obd-16-pins-obd2-verloopkabel-landbouwvoertuig" target="_blank" rel="noopener">Jaltest (JDC519A) | Claas/Renault 4+4-pins OBD – 16-pins OBD2 Verloopkabel | Landbouwvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-claas-renault-14-pins-obd-16-pins-obd2-verloopkabel-landbouwvoertuig-2" target="_blank" rel="noopener">Jaltest (JDC525A) | Claas/Renault 14-pins OBD - 16-pins OBD2 Verloopkabel | Landbouwvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-scania-can-4-pins-obd-16-pins-obd2-verloopkabel-verbrandingsmotor" target="_blank" rel="noopener">Jaltest (JDC532A) | Scania (CAN) 4-pins OBD – 16-pins OBD2 Verloopkabel | Verbrandingsmotor</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-caterpillar-14-pins-obd-16-pins-obd2-verloopkabel-verbrandingsmotor" target="_blank" rel="noopener">Jaltest (JDC533A) | Caterpillar 14-pins OBD - 16-pins OBD2 Verloopkabel | Verbrandingsmotor</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-hitachi-6-pins-obd-16-pins-obd2-verloopkabel-terrein-en-bouwmachine" target="_blank" rel="noopener">Jaltest (JDC535A) | Hitachi 6-pins OBD – 16-pins OBD2 Verloopkabel | Terrein- en Bouwmachine</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-komatsu-12-pins-obd-16-pins-obd2-verloopkabel-terrein-en-bouwmachine-2" target="_blank" rel="noopener">Jaltest (JDC536A) | Komatsu 12-pins OBD – 16-pins OBD2 Verloopkabel | Terrein- en Bouwmachine</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-hidromek-16-pins-obd-16-pins-obd2-verloopkabel-terrein-en-bouwmachine" target="_blank" rel="noopener">Jaltest (JDC541A) | Hidromek 16-pins OBD – 16-pins OBD2 Verloopkabel | Terrein- en Bouwmachine</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-doosan-14-pins-obd-16-pins-obd2-verloopkabel-terrein-en-bouwmachine" target="_blank" rel="noopener">Jaltest (JDC545A) | Doosan 14-pins OBD - 16-pins OBD2 Verloopkabel | Terrein- en Bouwmachine</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-doosan-dl03-6-pins-obd-16-pins-obd2-verloopkabel-verbrandingsmotor-2" target="_blank" rel="noopener">Jaltest (JDC547A) | Doosan (DL03) 6-pins OBD – 16-pins OBD2 Verloopkabel | Verbrandingsmotor</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jlg-haulotte-4-pins-obd-26-pins-db26-verloopkabel-hef-en-hijswerktuigen" target="_blank" rel="noopener">Jaltest (JDC549.9) | JLG/Haulotte 4-pins OBD – 26-pins DB26 Verloopkabel | Hef- en Hijswerktuigen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-liebherr-6-pins-obd-16-pins-obd2-verloopkabel-terrein-en-bouwmachine" target="_blank" rel="noopener">Jaltest (JDC551A) | Liebherr 6-pins OBD – 16-pins OBD2 Verloopkabel | Terrein- en Bouwmachine</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-still-4-4-pins-obd-16-pins-obd2-verloopkabel-hef-en-hijswerktuigen" target="_blank" rel="noopener">Jaltest (JDC555A) | Still 4+4-pins OBD - 16-pins OBD2 Verloopkabel | Hef- en Hijswerktuigen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-hyundai-robex-4-pins-obd-16-pins-obd2-verloopkabel-terrein-en-bouwmachine" target="_blank" rel="noopener">Jaltest (JDC556A) | Hyundai Robex 4-pins OBD – 16-pins OBD2 Verloopkabel | Terrein- en Bouwmachine</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-hyster-yale-3-pins-obd-16-pins-obd2-verloopkabel-hef-en-hijswerktuigen" target="_blank" rel="noopener">Jaltest (JDC557A9) | Hyster/Yale 3-pins OBD – 16-pins OBD2 Verloopkabel | Hef- en Hijswerktuigen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-haulotte-6-6-pins-obd-16-pins-obd2-verloopkabel-hef-en-hijswerktuigen-2" target="_blank" rel="noopener">Jaltest (JDC559A) | Haulotte 6+6-pins OBD - 16-pins OBD2 Verloopkabel | Hef- en Hijswerktuigen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-liebherr-rj45-netwerk-rj45-netwerk-verloopkabel-terrein-en-bouwmachine" target="_blank" rel="noopener">Jaltest (JDC563) | Liebherr RJ45 Netwerk – RJ45 Netwerk Verloopkabel | Terrein- en Bouwmachine</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-mitsubishi-caterpillar-12-pins-obd-16-pins-obd2-verloopkabel-hef-en-hijswerktuigen" target="_blank" rel="noopener">Jaltest (JDC565.9) | Mitsubishi/Caterpillar 12-pins OBD – 16-pins OBD2 Verloopkabel | Hef- en Hijswerktuigen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-curtis-4-pins-obd-26-pins-db26-verloopkabel-hef-en-hijswerktuigen-1" target="_blank" rel="noopener">Jaltest (JDC566.9) | Curtis 4-pins OBD - 26-pins DB26 Verloopkabel | Hef- en Hijswerktuigen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-curtis-4-pins-obd-26-pins-db26-verloopkabel-hef-en-hijswerktuigen" target="_blank" rel="noopener">Jaltest (JDC569.9) | Curtis 4-pins OBD - 26-pins DB26 Verloopkabel | Hef- en Hijswerktuigen</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-jdc572-9-hyundai-ce-series-9-pins-obd-26-pins-db26-verloopkabel-terrein-en-bouwmachine" target="_blank" rel="noopener">Jaltest (JDC572.9) | Hyundai (CE series) 9-pins OBD - 26-pins DB26 Verloopkabel | Terrein- en Bouwmachine</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-mercury-mefi-1-4-10-pins-obd-16-pins-obd2-verloopkabel-motorboot" target="_blank" rel="noopener">Jaltest (JDC604.9) | Mercury (MEFI 1-4) 10-pins OBD – 16-pins OBD2 Verloopkabel | Motorboot</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-mercury-smartcraft-g3-10-pins-ecu-16-pins-obd2-verloopkabel-motorboot" target="_blank" rel="noopener">Jaltest (JDC617A) | Mercury (SmartCraft G3) 10-pins ECU – 16-pins OBD2 Verloopkabel | Motorboot</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-volvo-penta-2-pins-obd-16-pins-obd2-verloopkabel-verbrandingsmotor" target="_blank" rel="noopener">Jaltest (JDC618A9) | Volvo Penta 2-pins OBD - 16-pins OBD2 Verloopkabel | Verbrandingsmotor</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-tohatsu-kokusan-denki-18-pins-ecu-16-pins-obd2-verloopkabel-motorboot" target="_blank" rel="noopener">Jaltest (JDC624A) | Tohatsu (Kokusan Denki) 18-pins ECU – 16-pins OBD2 Verloopkabel | Motorboot</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-evinrude-nmea-2000-5-5-pins-obd-16-pins-obd2-verloopkabel-motorboot-3" target="_blank" rel="noopener">Jaltest (JDC628A) | Evinrude (NMEA 2000) 5+5-pins OBD – 16-pins OBD2 Verloopkabel | Motorboot</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-cummins-4-60-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">Jaltest (JDCM2150) | Cummins (ECU) 4+60-pins – 16-pins OBD2 Verloopkabel | Bedrijfsvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-cummins-96-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">Jaltest (JDCM2350/2450) | Cummins (ECU) 96-pins – 16-pins OBD2 Verloopkabel | Bedrijfsvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-cummins-94-96-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">Jaltest (JDCM2670/2880) | Cummins (ECU) 94+96-pins – 16-pins OBD2 Verloopkabel | Bedrijfsvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/jaltest-knorr-bremse-wabco-4-pins-ebs-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">Jaltest (MDC07) | Knorr-Bremse/Wabco 4-pins EBS – 16-pins OBD2 Verloopkabel | Bedrijfsvoertuig</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-indian-victory-polaris-8-pins-obd-16-pins-obd2-verloopkabel-motorfiets" target="_blank" rel="noopener">OBDSTAR (M042A) | Indian/Victory/Polaris 8-pins OBD – 16-pins OBD2 Verloopkabel | Motorfiets</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-vm-motori-4-pins-obd-16-pins-obd2-verloopkabel-motorboot" target="_blank" rel="noopener">OBDSTAR (M076) | MerCruiser/VM Motori 4-pins OBD – 16-pins OBD2 Verloopkabel | Verbrandingsmotor</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-8-8-pins-dcdc-15-pins-db15-verloopkabel-personenauto" target="_blank" rel="noopener">OBDSTAR (T003) | Mercedes-Benz 48V Accu + DCDC Module – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-t008-verloopkabel-personenauto" target="_blank" rel="noopener">OBDSTAR (T008) | Mercedes-Benz ABS (204-chassis) – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-16-pins-tcm-15-pins-db15-verloopkabel-personenauto-3" target="_blank" rel="noopener">OBDSTAR (TCM-005) | Bosch (DQ380/381/500) 16-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-5-pins-tcm-15-pins-db15-verloopkabel-personenauto" target="_blank" rel="noopener">OBDSTAR (TCM-010) | Getrag (VGS2-FDCT) 12-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-6-pins-tcm-15-pins-db15-verloopkabel-personenauto" target="_blank" rel="noopener">OBDSTAR (TCM-011) | Getrag (VGS2-FCVT) 6-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-tcm-012" target="_blank" rel="noopener">OBDSTAR (TCM-012) | Siemens (VGS2-NAG2/VGS3-NAG2) 6-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-14-pins-tcm-15-pins-db15-verloopkabel-personenauto" target="_blank" rel="noopener">OBDSTAR (TCM-018) | GM (6L30/35/40/45/50) 14-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-16-pins-tcm-15-pins-db15-verloopkabel-personenauto-4" target="_blank" rel="noopener">OBDSTAR (TCM-019) | GM (6L45/50/80/90) 16-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-16-pins-tcm-15-pins-db15-verloopkabel-personenauto-2" target="_blank" rel="noopener">OBDSTAR (TCM-021) | ZF (6HP19/21/26/28/32) 16-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-16-pins-tcm-15-pins-db15-verloopkabel-personenauto-1" target="_blank" rel="noopener">OBDSTAR (TCM-022) | Continental (6HP) 16-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-16-pins-tcm-15-pins-db15-verloopkabel-personenauto-tcm-024" target="_blank" rel="noopener">OBDSTAR (TCM-024) | ZF (8HP45-TC277) 16-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr>
+<tr><td><a href="https://astools.nl/products/obdstar-16-pins-tcm-15-pins-db15-verloopkabel-personenauto" target="_blank" rel="noopener">OBDSTAR (TCM-025) | ZF (8HP45-TC275) 16-pins TCM – 15-pins DB15 Verloopkabel | Personenauto</a></td></tr></table></div></details>
+
+<h2>Wat in orde bleek</h2>
+<p class="intro">Voor het volledige beeld: dit is over de hele linie gecontroleerd en zat goed.</p>
+
+<ul class="oklijst">
+<li>Elke pagina heeft een unieke paginatitel en meta-omschrijving (1 net iets te lange meta-omschrijving; 2×2 producten delen dezelfde tekst)</li>
+<li>Elke pagina heeft precies één H1-kop, een canonical-URL, een og:image (voor social sharing) en Product-structured-data voor Google</li>
+<li>Alle 994 beschrijvingen zijn in het Nederlands; geen Engelse restteksten, geen lorem-ipsum of placeholder-teksten gevonden</li>
+<li>Geen producten met prijs €0,00, geen extreem afwijkende prijzen, geen kapotte links in beschrijvingen</li>
+<li>Geen producten zonder afbeelding, geen producten zonder merk</li>
+</ul>
+
+<p class="methode"><strong>Methode.</strong> Volledige productcatalogus opgehaald via de Shopify-data van astools.nl
+(994 producten, 3 juli 2026). Alle beschrijvingen, prijzen, varianten en afbeeldingsdata per product geanalyseerd;
+paginastructuur (titel, meta, H1, canonical, structured data) geverifieerd op de live pagina's; alt-teksten per
+afbeelding gecontroleerd via de productdata van alle 994 producten. Volledige bevindingenlijst als CSV beschikbaar.
+Een visuele browser-steekproef kon niet draaien (Chrome-koppeling reageerde niet); alle controles zijn op de
+onderliggende paginadata uitgevoerd.</p>
+</main>
+
+</body>
+</html>
