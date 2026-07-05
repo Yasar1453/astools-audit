@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Feitencontrole batch 1 — AsTools</title>
+<title>Feitencontrole — AsTools</title>
 </head>
 <body>
 <style>
@@ -105,14 +105,14 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <div class="omslag">
 <header class="kop">
-  <p class="eyebrow">AsTools.nl · Feitencontrole · Batch 1 van ±43</p>
-  <h1>De 25 duurste producten, gecontroleerd op feiten</h1>
-  <p class="sub">Elke beschrijving is intern gecheckt op tegenstrijdigheden én extern geverifieerd tegen de fabrikant (Jaltest/Cojali, Autel, Topdon, OBDSTAR, OTOFIX, Launch). Prijsrange €2.299–€6.999. Klik op een productnaam om de pagina in de shop te openen.</p>
+  <p class="eyebrow">AsTools.nl · Feitencontrole · Batch 1–2 van ±43</p>
+  <h1>De 50 duurste producten, gecontroleerd op feiten</h1>
+  <p class="sub">Elke beschrijving is intern gecheckt op tegenstrijdigheden én extern geverifieerd tegen de fabrikant (Jaltest/Cojali, Autel, Topdon, OBDSTAR, OTOFIX, Launch). Prijsrange €1.294–€6.999. Klik op een productnaam om de pagina in de shop te openen.</p>
   <div class="tegels">
-    <div class="tegel"><span class="n">94</span><span class="l">claims gecontroleerd</span></div>
-    <div class="tegel ok"><span class="n">64</span><span class="l">kloppen (met bron)</span></div>
-    <div class="tegel fout"><span class="n">9</span><span class="l">aantoonbaar fout</span></div>
-    <div class="tegel twijfel"><span class="n">13</span><span class="l">twijfel</span></div>
+    <div class="tegel"><span class="n">175</span><span class="l">claims gecontroleerd</span></div>
+    <div class="tegel ok"><span class="n">116</span><span class="l">kloppen (met bron)</span></div>
+    <div class="tegel fout"><span class="n">13</span><span class="l">aantoonbaar fout</span></div>
+    <div class="tegel twijfel"><span class="n">34</span><span class="l">twijfel</span></div>
   </div>
 </header>
 
@@ -198,12 +198,64 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
   <span class="bron">Bron: <a href="https://www.x431tool.com/wholesale/launch-x-431-pad-vii.html" target="_blank" rel="noopener">x431tool.com (distributeur-datasheet)</a></span>
 </article>
 
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/jaltest-bestelauto-activeringslicentie" target="_blank" rel="noopener">Jaltest (293600) | LCV (Modulair) | Software-licentie</a> <span class="prijs">€2.249,95 · batch 2</span></h3>
+  <p>Vierde geval van het patroon: variant heet <strong>„Levenslang"</strong>, tekst zegt <strong>12 maanden</strong> + jaarlijkse verlenging. Extra: externe bronnen classificeren 293600 als eenmalige activatie, niet als 12-maands updatelicentie — het producttype zelf is dus ook onduidelijk beschreven.</p>
+  <span class="bron">Bron: <a href="https://www.mk3.com/jaltest-293600-modular-lcv-software-activation" target="_blank" rel="noopener">mk3.com (SKU 293600)</a></span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/jaltest-trailer-activeringslicentie" target="_blank" rel="noopener">Jaltest (293500) | Trailer (Modulair) | Software-licentie</a> <span class="prijs">€1.749,95 · batch 2</span></h3>
+  <p>Vijfde geval: variant <strong>„Levenslang"</strong>, tekst zegt <strong>twaalf maanden</strong> en volledige blokkade na de vervaldatum. De officiële Jaltest-FAQ bevestigt dat modulaire versies (truck, trailer, bus) direct na verloop blokkeren — „Levenslang" is dus extern bevestigd onjuist.</p>
+  <span class="bron">Bron: <a href="https://www.jaltest.com/en/faq/product-support/" target="_blank" rel="noopener">jaltest.com FAQ</a></span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/launch-x-431-pro-5-auto-uitleesapparaat" target="_blank" rel="noopener">Launch X-431 Pro 5 | Uitleesapparaat</a> <span class="prijs">€1.519,95 · batch 2</span></h3>
+  <p>De pagina mixt <strong>twee productgeneraties</strong>: de verpakkingsinhoud noemt de „SmartBox 3.0"-interface (oude PRO5), de spec-tabel noemt „SmartLink C" (nieuwe PRO5). Ook de tablet-specs in de tabel horen bij de oude versie. De klant kan niet weten welke uitvoering hij krijgt — en de specs kloppen maar voor één van de twee.</p>
+  <p class="fix">→ Bepaal welke uitvoering AsTools daadwerkelijk levert en herschrijf verpakkingsinhoud + spec-tabel voor die ene versie.</p>
+  <span class="bron">Bron: <a href="https://www.launchx431.fr/service/launch-x431-pro5-smartbox-vs-pro5-smartlink.html" target="_blank" rel="noopener">launchx431.fr (vergelijking beide generaties)</a></span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/autel-maxicom-mk908-pro-ii-auto-uitleesapparaat" target="_blank" rel="noopener">Autel MaxiCom MK908 Pro II</a> <span class="prijs">€2.274,95 · batch 2</span></h3>
+  <dl class="spec">
+    <dt>Camera 8 MP</dt><dd>→ <span class="goed">16 MP</span> (achtercamera, autofocus met flitser)</dd>
+  </dl>
+  <span class="bron">Bron: <a href="https://www.autel.com/mk3/3820.jhtml" target="_blank" rel="noopener">autel.com</a></span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/obdstar-keymaster-g3-multifunctionele-programmeur" target="_blank" rel="noopener">OBDSTAR KeyMaster G3</a> <span class="prijs">€1.659,95 · batch 2</span></h3>
+  <dl class="spec">
+    <dt>„800 megapixel achtercamera"</dt><dd>→ <span class="goed">8 MP</span> (vertaalfout van de Chinese notatie „800W" = 8 miljoen pixels; staat in tekst én spec-tabel)</dd>
+  </dl>
+  <span class="bron">Bron: <a href="https://keyshop-online.com/products/obdstar-key-master-x300-g3-classic-key-programmer" target="_blank" rel="noopener">keyshop-online.com</a></span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/topdon-one-plus-uitleesapparaat-auto" target="_blank" rel="noopener">Topdon One Plus</a> <span class="prijs">€1.474,95 · batch 2</span></h3>
+  <p>De pagina claimt drie keer „ECU-programmering op 4 systemen (BMW, <strong>Mercedes-Benz</strong> en VAG)". Topdon zelf vermeldt ECU-programmering alleen voor <strong>BMW en VAG</strong> — Mercedes valt onder codering, niet programmering. Bovendien verwart de zin systemen (ECM/SRS/ABS/TCM) met merken.</p>
+  <span class="bron">Bron: <a href="https://eu.topdon.com/products/one-plus" target="_blank" rel="noopener">eu.topdon.com</a></span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/topdon-ev-package-accessoires" target="_blank" rel="noopener">Topdon EV Package</a> <span class="prijs">€1.349,95 · batch 2</span></h3>
+  <p>De tekst claimt dekking voor „meer dan 74 elektrische voertuig<strong>merken</strong>"; de fabrikant spreekt van „74+ <strong>vehicles and software systems</strong>" — voertuigen/systemen, geen merken. De eigen spec-tabel zegt het wél goed. Ook: de verpakkingsinhoud noemt maar 15 van de beloofde 18 connectoren.</p>
+  <span class="bron">Bron: <a href="https://www.topdondiagnostics.co.uk/ev-package" target="_blank" rel="noopener">topdondiagnostics.co.uk</a></span>
+</article>
+
 <h2><span class="chip fout">Template</span> Winkelbrede fout: „IP40 spatwaterbestendig"</h2>
 <div class="callout">
   <h3>Op vrijwel elke Jaltest-hardwarepagina staat „IP40 stof- en spatwaterbestendig"</h3>
   <p>IP40 betekent per definitie <strong>géén waterbescherming</strong> (het tweede cijfer is 0). Op de drie Marine-pagina's wordt de VCI zelfs „waterbestendig" genoemd — voor apparatuur op boten is dat materieel misleidend. Dit is een template-tekst en zit dus vermoedelijk ook op de Jaltest-pagina's buiten deze batch.</p>
   <p class="fix">→ In één zoek-en-vervang te fixen: „IP40 stofbestendig" zonder waterclaim, of de werkelijke IP-klasse bij Cojali opvragen (één bron noemt IP54 voor de Link V9).</p>
-  <p>Aangetroffen op: <a href="https://astools.nl/products/jaltest-vrachtwagen-uitleesapparaat" target="_blank" rel="noopener">Vrachtwagen</a> · <a href="https://astools.nl/products/jaltest-ohw-off-highway-uitleesapparaat" target="_blank" rel="noopener">OHW</a> · <a href="https://astools.nl/products/jaltest-autobus-uitleesapparaat" target="_blank" rel="noopener">Autobus</a> · <a href="https://astools.nl/products/jaltest-agv-agricultural-uitleesapparaat" target="_blank" rel="noopener">AGV</a> · <a href="https://astools.nl/products/jaltest-bestelauto-uitleesapparaat" target="_blank" rel="noopener">Bestelauto</a> · <a href="https://astools.nl/products/jaltest-trailer-uitleesapparaat" target="_blank" rel="noopener">Trailer</a> · <a href="https://astools.nl/products/jaltest-mhe-material-handling-equipment-uitleesapparaat" target="_blank" rel="noopener">MHE</a> · <a href="https://astools.nl/products/jaltest-marine-full-uitleesapparaat" target="_blank" rel="noopener">Marine Full</a> · <a href="https://astools.nl/products/jaltest-marine-binnenboord-uitleesapparaat" target="_blank" rel="noopener">Marine Binnenboord</a> · <a href="https://astools.nl/products/jaltest-marine-buitenboord-uitleesapparaat" target="_blank" rel="noopener">Marine Buitenboord</a> · <a href="https://astools.nl/products/jaltest-multifunctionele-voertuig-uitleesapparaat" target="_blank" rel="noopener">Veegmachines</a></p>
+  <p>Aangetroffen op: <a href="https://astools.nl/products/jaltest-vrachtwagen-uitleesapparaat" target="_blank" rel="noopener">Vrachtwagen</a> · <a href="https://astools.nl/products/jaltest-ohw-off-highway-uitleesapparaat" target="_blank" rel="noopener">OHW</a> · <a href="https://astools.nl/products/jaltest-autobus-uitleesapparaat" target="_blank" rel="noopener">Autobus</a> · <a href="https://astools.nl/products/jaltest-agv-agricultural-uitleesapparaat" target="_blank" rel="noopener">AGV</a> · <a href="https://astools.nl/products/jaltest-bestelauto-uitleesapparaat" target="_blank" rel="noopener">Bestelauto</a> · <a href="https://astools.nl/products/jaltest-trailer-uitleesapparaat" target="_blank" rel="noopener">Trailer</a> · <a href="https://astools.nl/products/jaltest-mhe-material-handling-equipment-uitleesapparaat" target="_blank" rel="noopener">MHE</a> · <a href="https://astools.nl/products/jaltest-marine-full-uitleesapparaat" target="_blank" rel="noopener">Marine Full</a> · <a href="https://astools.nl/products/jaltest-marine-binnenboord-uitleesapparaat" target="_blank" rel="noopener">Marine Binnenboord</a> · <a href="https://astools.nl/products/jaltest-marine-buitenboord-uitleesapparaat" target="_blank" rel="noopener">Marine Buitenboord</a> · <a href="https://astools.nl/products/jaltest-multifunctionele-voertuig-uitleesapparaat" target="_blank" rel="noopener">Veegmachines</a> · <a href="https://astools.nl/products/jaltest-marine-jetski-uitleesapparaat" target="_blank" rel="noopener">Marine Jetski (batch 2)</a></p>
+</div>
+
+<div class="callout">
+  <h3>Patroon „Levenslang"-varianten: inmiddels 5 pagina's, maar niet allemaal fout</h3>
+  <p>Bij Jaltest is een <strong>activatie</strong> permanent (daar klopt „Levenslang") maar een <strong>modulaire licentie</strong> 12 maanden geldig (daar is „Levenslang" fout). Fout bevonden: CV 29303, Vrachtwagen 293100, Autobus 293300, LCV 293600 en Trailer 293500. Correct bevonden: OHW-activatie 29308, AGV-activatie 29751 en Marine Full-activatie 74502001. Vuistregel voor de fix: heet het artikel bij distributeurs „License of use" (activatie) → „Levenslang" mag; is het een modulaire licentie → hernoem naar „1 jaar".</p>
 </div>
 
 <h2><span class="chip twijfel">Twijfel</span> Checken bij leverancier of fabrikant</h2>
@@ -251,11 +303,67 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
   <p>De nummers 71501001 en 71502018 zijn alleen op AsTools-pagina's vindbaar, niet in de Cojali/Jaltest-catalogus of bij andere distributeurs. Daarnaast heet ook hier de variant „Levenslang" (€3.199,95) terwijl de tekst zegt dat de module zonder aparte jaarlicentie „niet functioneel" is.</p>
 </article>
 
+<article class="kaart twijfel">
+  <h3><a href="https://astools.nl/products/obdstar-motomaster-full-uitleesapparaat" target="_blank" rel="noopener">OBDSTAR Motomaster (Full)</a> — „2 jaar updates" <span class="prijs">batch 2</span></h3>
+  <p>De pagina belooft 24 maanden updates maar zegt direct daarna „na het eerste jaar kan de licentie worden verlengd". OBDSTAR-resellers vermelden <strong>1 jaar</strong> als standaard. Zelfde vraag als bij de Marine Master: bundelt AsTools zelf een extra jaar, of klopt de claim niet?</p>
+  <span class="bron">Bron: <a href="https://www.obdstarstore.com/wholesale/obdstar-motomaster-full-version-motorcycle-scanner.html" target="_blank" rel="noopener">obdstarstore.com</a></span>
+</article>
+
+<article class="kaart twijfel">
+  <h3><a href="https://astools.nl/products/obdstar-keymaster-g3-multifunctionele-programmeur" target="_blank" rel="noopener">OBDSTAR KeyMaster G3</a> — „1 jaar updates" (mogelijk in jullie nadeel) <span class="prijs">batch 2</span></h3>
+  <p>Omgekeerd geval: de pagina claimt 1 jaar, terwijl meerdere distributeurs de KeyMaster G3 met <strong>2 jaar</strong> gratis updates adverteren. Als de fabrieksbundel 2 jaar is, verkoopt de pagina zichzelf tekort. Ook tegenstrijdig: de BENCH-A V3-kabelset staat in de verpakkingsinhoud én als „niet standaard meegeleverd".</p>
+  <span class="bron">Bron: <a href="https://keyshop-online.com/products/obdstar-key-master-x300-g3-classic-key-programmer" target="_blank" rel="noopener">keyshop-online.com</a></span>
+</article>
+
+<article class="kaart twijfel">
+  <h3><a href="https://astools.nl/products/jaltest-cv-ohw-kit-hardware-compacte-koffer" target="_blank" rel="noopener">Jaltest CV/OHW Kit (70001052)</a> — kabels passen niet bij de Link V9 <span class="prijs">batch 2</span></h3>
+  <p>De verpakkingsinhoud noemt een <strong>DB15</strong>-OBD2-kabel en een <strong>USB-A/USB-B</strong>-kabel, maar de Link V9 gebruikt DB26 en USB-C (de Marine-zusterkit vermeldt dat wél correct). Vermoedelijk V8-teksten die zijn blijven staan. Kitnummer 70001052 is bovendien alleen op AsTools-pagina's vindbaar.</p>
+  <span class="bron">Bron: <a href="https://www.jaltest.com/en/article/JDC107.9B/usb-cable-jaltest-link-v9-%E2%80%93-usb-c/" target="_blank" rel="noopener">jaltest.com (JDC107.9B = USB-C)</a></span>
+</article>
+
+<article class="kaart twijfel">
+  <h3><a href="https://astools.nl/products/jaltest-marine-full-activeringslicenties" target="_blank" rel="noopener">Jaltest Marine Full-activatie (74502001)</a> — spreekt zichzelf tegen <span class="prijs">batch 2</span></h3>
+  <p>De inleiding zegt dat de activatie „niet in gebruiksmogelijkheden voorziet", maar de sectie Toepassingen belooft dat dezelfde activatie „een breed scala aan diagnostische functies ontgrendelt". Eén van beide moet weg. Distributeurs voeren bovendien 74501001 én 74502001 voor Marine Full — welk nummer hoort bij dit product?</p>
+  <span class="bron">Bron: <a href="https://www.balticdiag.com/jaltest-marine-full-software" target="_blank" rel="noopener">balticdiag.com</a></span>
+</article>
+
+<article class="kaart twijfel">
+  <h3><a href="https://astools.nl/products/jaltest-70901011-oem-rmi-scania-software-licentie" target="_blank" rel="noopener">Jaltest OEM RMI Scania</a> + <a href="https://astools.nl/products/jaltest-70901003-oem-rmi-daf-software-licentie" target="_blank" rel="noopener">DAF</a> — ontbrekende voorwaarde <span class="prijs">batch 2</span></h3>
+  <p>Beide artikelnummers kloppen (bevestigd bij officiële distributeurs), maar de pagina's vermelden nergens dat een <strong>actieve Jaltest CV/Truck-basislicentie vereist</strong> is. De Scania-pagina bevat bovendien boilerplate over een „activatiecode per e-mail" die bij Jaltest niet bestaat (activatie loopt via het serienummer van de interface).</p>
+  <span class="bron">Bron: <a href="https://www.aa-equipment.nl/product/jaltest-oem-rmi-scania-1-jaarlicentie" target="_blank" rel="noopener">aa-equipment.nl</a></span>
+</article>
+
+<article class="kaart twijfel">
+  <h3><a href="https://astools.nl/products/autel-maxicom-mk906-pro2-ts-uitleesapparaat-auto" target="_blank" rel="noopener">Autel MK906 Pro2-TS</a> — „meer dan 45 servicefuncties" <span class="prijs">batch 2</span></h3>
+  <p>Autel adverteert dit model doorgaans met „36+" servicefuncties; „meer dan 45" is nergens bij de fabrikant terug te vinden.</p>
+  <span class="bron">Bron: <a href="https://store.autel.com/products/autel-maxicom-mk906s-pro2-ts" target="_blank" rel="noopener">store.autel.com</a></span>
+</article>
+
 <h2><span class="chip info">Redactie</span> Kleine punten per pagina</h2>
 <p class="intro">Geen fouten die een koop beïnvloeden, wel slordigheden die opvallen bij deze prijsklasse.</p>
 
 <details>
-  <summary>17 redactiepunten — klik om uit te klappen</summary>
+  <summary>Batch 2 — 14 redactiepunten — klik om uit te klappen</summary>
+  <ul class="lijstje">
+    <li><a href="https://astools.nl/products/obdstar-motomaster-full-uitleesapparaat" target="_blank" rel="noopener">OBDSTAR Motomaster</a> — motormerk Victory is vertaald als „Overwinning" in de merkenlijst; verbindingen-opsomming verschilt tussen tekst en spec-tabel.</li>
+    <li><a href="https://astools.nl/products/obdstar-keymaster-g3-multifunctionele-programmeur" target="_blank" rel="noopener">OBDSTAR KeyMaster G3</a> — Dodge, Fiat en Ford staan dubbel in de ECU-flasher-lijst; Sea-Doo (Canadees) staat onder „Aziatisch" en dat kopje staat er twee keer; variant „A1+A2" wordt nergens uitgelegd. Ook: uitverkocht maar zichtbaar.</li>
+    <li><a href="https://astools.nl/products/launch-x-431-v-smartlink-hd-vrachtwagen-uitleesapparaat" target="_blank" rel="noopener">Launch SmartLink HD</a> — verpakkingsinhoud noemt „SmartLink C" zonder het beloofde versienummer 2.0; topologie en CAN FD/DoIP staan dubbel; categorie noemt sneeuwscooters die nergens voorkomen.</li>
+    <li><a href="https://astools.nl/products/topdon-one-plus-uitleesapparaat-auto" target="_blank" rel="noopener">Topdon One Plus</a> — Gift Card én de twee gratis items staan allebei als aparte regels in de verpakkingsinhoud (dubbelop); de gratis TopScan Master wordt in de tekst nergens genoemd.</li>
+    <li><a href="https://astools.nl/products/topdon-ts005-warmtebeeldcamera" target="_blank" rel="noopener">Topdon TS005</a> — „Beveiligingssurveillance" gelabeld als „Diagnosetoepassing" (automotive-sjabloon op een observatieproduct); schermtype OLED vs LCOS verschilt ook tussen Topdon's eigen sites.</li>
+    <li><a href="https://astools.nl/products/topdon-ev-package-accessoires" target="_blank" rel="noopener">Topdon EV Package</a> — verpakkingsinhoud „1x Opbergkoffer of -doos" is onbepaald; Ethernet-kabel en voedingsadapters worden nergens toegelicht.</li>
+    <li><a href="https://astools.nl/products/jaltest-70901003-oem-rmi-daf-software-licentie" target="_blank" rel="noopener">Jaltest OEM RMI DAF</a> — „activatie verloopt automatisch" botst met de handmatige serienummer-stap (zelfde euvel op meerdere licentiepagina's).</li>
+    <li><a href="https://astools.nl/products/jaltest-70901011-oem-rmi-scania-software-licentie" target="_blank" rel="noopener">Jaltest OEM RMI Scania</a> — generieke pc-systeemeisen (Core i5, 8 GB RAM) die niet tot Jaltest herleidbaar zijn; looptijd alleen in de spec-tabel expliciet.</li>
+    <li><a href="https://astools.nl/products/jaltest-trailer-activeringslicentie" target="_blank" rel="noopener">Jaltest Trailer-licentie</a> — TYPE-veld is „Jaltest" waar zusterpagina's „Online Product" gebruiken.</li>
+    <li><a href="https://astools.nl/products/jaltest-marine-jetski-uitleesapparaat" target="_blank" rel="noopener">Jaltest Marine Jetski</a> — „Marine" staat als extra te activeren module genoemd terwijl het product de Marine-module ís; spec zegt USB-B waar de V9 USB-C gebruikt.</li>
+    <li><a href="https://astools.nl/products/jaltest-marine-kit-hardware-compacte-koffer" target="_blank" rel="noopener">Jaltest Marine Kit</a> — „compacte koffer" van 505×381 mm schuurt; kitnummer 70001053 alleen bij AsTools vindbaar.</li>
+    <li><a href="https://astools.nl/products/jaltest-ohw-activeringslicentie-upgrade" target="_blank" rel="noopener">Jaltest OHW-upgrade (74001001)</a> — „gereduceerde upgradeprijs" wordt nergens onderbouwd; variant „Levenslang" zonder genoemde looptijd.</li>
+    <li><a href="https://astools.nl/products/obdstar-dc706-full-ecu-programmeur" target="_blank" rel="noopener">OBDSTAR DC706</a> — „alle zeven configuraties" is dubbelzinnig geformuleerd (7 = verkoopvarianten bij de fabrikant).</li>
+    <li><a href="https://astools.nl/products/autel-maxisys-ultra-update-licentie" target="_blank" rel="noopener">Autel Ultra update-licenties</a> — activatie „door ons digitaal" vs „automatisch binnen 24 uur" wisselt; SKU-veld bevat vrije tekst i.p.v. artikelnummer.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Batch 1 — 17 redactiepunten — klik om uit te klappen</summary>
   <ul class="lijstje">
     <li><a href="https://astools.nl/products/jaltest-cv-commercial-vehicles-uitleesapparaat" target="_blank" rel="noopener">Jaltest CV Uitleesapparaat</a> — PSI en Thermo King staan dubbel in de merkenlijst; als enige van de serie geen spec-tabel voor de Link V9; „algemeen erkend als marktleider" zonder onderbouwing.</li>
     <li><a href="https://astools.nl/products/jaltest-vrachtwagen-uitleesapparaat" target="_blank" rel="noopener">Jaltest Vrachtwagen</a> — spec-rij „Afmetingen" bevat geen maten maar de marketingclaim „±76% lichter dan V8" (zelfde euvel op AGV-, Bestelauto- en MHE-pagina).</li>
@@ -286,13 +394,16 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
     <li>Jaltest-merkendekking voor bus, marine, MHE en veegmachines — conform de officiële coverage-pagina's</li>
     <li>OBDSTAR ECU Master verpakkingsinhoud — tot op kabelniveau correct</li>
     <li>„2 jaar gratis updates" bij Autel, Topdon, OTOFIX en Launch — bevestigd (alleen OBDSTAR Marine Master wijkt af, zie twijfel)</li>
+    <li><strong>Batch 2:</strong> de Jaltest AGV- en MHE-hardwarekits kloppen tot op artikelnummer-niveau exact met de officiële Cojali-prijslijst (alle 6–7 componenten per kit geverifieerd)</li>
+    <li><strong>Batch 2:</strong> OBDSTAR DC706-specs exact conform fabrikant (tot op 0,766 kg); Topdon TS005-warmtebeeldspecs exact conform; Autel Ultra/Ultra EV-updatelicenties conform het Total Care Program; OEM RMI DAF- en Scania-artikelnummers bevestigd bij officiële distributeurs</li>
+    <li><strong>Batch 2:</strong> „Levenslang" is bij de échte activaties (OHW 29308, AGV 29751, Marine Full 74502001) wél correct — het probleem zit alleen bij de modulaire licenties</li>
   </ul>
 </div>
 
 <footer>
-  <p><strong>Methode:</strong> per product is de beschrijving intern gecontroleerd op tegenstrijdigheden en zijn de 2–4 belangrijkste claims geverifieerd tegen fabrikantsites en officiële distributeurs (bronlinks bij elk punt). 64 van de 94 claims klopten. Volledige data: <em>factcheck-bevindingen.csv</em> (158 regels).</p>
   <p><a href="audit.html" style="color:var(--accent)">→ Bekijk ook de volledige vorm-audit van alle 994 producten</a></p>
-  <p>Batch 1 van ±43 · 25 producten · gecontroleerd 4 juli 2026 · volgende batch: de volgende 25 duurste producten of een merk naar keuze.</p>
+  <p><strong>Methode:</strong> per product is de beschrijving intern gecontroleerd op tegenstrijdigheden en zijn de 2–4 belangrijkste claims geverifieerd tegen fabrikantsites en officiële distributeurs (bronlinks bij elk punt). 116 van de 175 claims klopten. Volledige data: <em>factcheck-bevindingen.csv</em> (295 regels).</p>
+  <p>Batch 1–2 van ±43 · 50 producten (€1.294–€6.999) · gecontroleerd 4–5 juli 2026 · volgende batch: de volgende 25 duurste producten of een merk naar keuze.</p>
 </footer>
 </div>
 
