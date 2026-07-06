@@ -105,14 +105,14 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <div class="omslag">
 <header class="kop">
-  <p class="eyebrow">AsTools.nl · Feitencontrole · Batch 1–10 van ±40</p>
-  <h1>De 250 duurste producten, gecontroleerd op feiten</h1>
+  <p class="eyebrow">AsTools.nl · Feitencontrole · Batch 1–11 van ±40</p>
+  <h1>De 275 duurste producten, gecontroleerd op feiten</h1>
   <p class="sub">Elke beschrijving is intern gecheckt op tegenstrijdigheden én extern geverifieerd tegen de fabrikant (Jaltest/Cojali, Autel, Topdon, OBDSTAR, OTOFIX, Launch, Xhorse, CarLabImmo, Autool). Prijsrange €399–€6.999. Vanaf batch 5 wordt elk „fout"-oordeel bovendien adversarieel getoetst door een tweede, onafhankelijke controle vóór publicatie. Klik op een productnaam om de pagina in de shop te openen.</p>
   <div class="tegels">
-    <div class="tegel"><span class="n">1.217</span><span class="l">claims gecontroleerd</span></div>
-    <div class="tegel ok"><span class="n">758</span><span class="l">kloppen (met bron)</span></div>
-    <div class="tegel fout"><span class="n">83</span><span class="l">aantoonbaar fout</span></div>
-    <div class="tegel twijfel"><span class="n">274</span><span class="l">twijfel</span></div>
+    <div class="tegel"><span class="n">1.343</span><span class="l">claims gecontroleerd</span></div>
+    <div class="tegel ok"><span class="n">840</span><span class="l">kloppen (met bron)</span></div>
+    <div class="tegel fout"><span class="n">84</span><span class="l">aantoonbaar fout</span></div>
+    <div class="tegel twijfel"><span class="n">301</span><span class="l">twijfel</span></div>
   </div>
 </header>
 
@@ -699,6 +699,13 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 </article>
 
 <article class="kaart fout">
+  <h3><a href="https://astools.nl/products/jaltest-cummins-94-96-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">Jaltest (JDCM2670/2880) Cummins ECU-kabel</a> — lijst laat juist de eigen ECU's weg <span class="prijs">€364,95 · batch 11</span></h3>
+  <p>Het artikelnummer <strong>JDCM2670/2880</strong> hoort bij de Cummins ECM's CM2670/CM2880, maar de lijst „compatibele ECU's" op de pagina noemt <strong>CM570, CM870, CM871, CM876, CM2150, CM2250, CM2350</strong> — precies de ECU's die elk hun eigen kabel hebben, en laat juist de twee ECU's weg waar de kabel naar vernoemd is. Een duidelijke copy-fout. Bijkomend: Cojali documenteert dit als isolatie-/bench-harnas, terwijl de pagina het als 16-pins OBD2-verloopkabel presenteert.</p>
+  <p class="fix">→ De compatibele-ECU-lijst corrigeren naar CM2670/CM2880 (of de juiste ECU-set voor dit harnas).</p>
+  <span class="bron">Bron: <a href="https://www.eclipse-tech.co.uk/product/cable-for-cummins-ecu-reprogramming-cm2670-2880/" target="_blank" rel="noopener">eclipse-tech.co.uk (JDCM2670/2880 = CM2670/CM2880)</a> · adversarieel bevestigd</span>
+</article>
+
+<article class="kaart fout">
   <h3><a href="https://astools.nl/products/obdstar-iscan-kawasaki-marine-uitleesapparaat" target="_blank" rel="noopener">OBDSTAR IScan Kawasaki (Marine)</a> — motorfiets-functies op een jetski-pagina <span class="prijs">€389,95 · batch 10</span></h3>
   <p>De servicefuncties op deze <strong>marine</strong>-pagina zijn <strong>motorfiets-functies</strong>: „ABS-remsysteem ontluchten", „registratie stuurkolomvergrendeling", startonderbreker/sleutelhanger-registratie, transportmodus, brandstofinjectie-ECU-registratie. Een Kawasaki-waterscooter heeft geen ABS-remmen en geen stuurkolomslot — deze lijst komt van de IScan Kawasaki <strong>motorfiets</strong>-variant. De echte marine-set (BCM-simulator, systeemkalibratie/-formatie) ontbreekt. Zelfde zustermodel-contaminatie als de Cummins/Indmar-verwisseling in batch 4.</p>
   <p class="fix">→ De motorfiets-functielijst vervangen door de marine-set (zoals op de Suzuki-marine-pagina, die het wél goed heeft).</p>
@@ -765,6 +772,20 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <h2><span class="chip info">Redactie</span> Kleine punten per pagina</h2>
 <p class="intro">Geen fouten die een koop beïnvloeden, wel slordigheden die opvallen bij deze prijsklasse.</p>
+
+<details>
+  <summary>Batch 11 — 8 redactiepunten — klik om uit te klappen</summary>
+  <ul class="lijstje">
+    <li><strong>Schoonste batch tot nu toe:</strong> van 5 „fout"-kandidaten hield na adversariële toetsing er maar één stand (de Cummins-kabel hierboven); vier zijn terecht afgezwakt of weerlegd.</li>
+    <li><strong>⟲ Weerlegd:</strong> de <a href="https://astools.nl/products/autel-maxipro-mp808bt-update-licentie" target="_blank" rel="noopener">MP808BT-licentie</a> zou „programmeren" beloven — maar de pagina claimt dat helemaal niet; het is puur een update-licentie. Onterechte beschuldiging voorkomen.</li>
+    <li><strong>Geen zustermodel-fout:</strong> alle 6 OBDSTAR IScan-motorvarianten (<a href="https://astools.nl/products/obdstar-suzuki-uitleesapparaat-motorfiets" target="_blank" rel="noopener">Suzuki-motorfiets</a>, Aprilia, Gilera, Vespa, BMW, Harley) dragen de juiste motorfiets-functieset — anders dan de Kawasaki-marine-verwisseling in batch 10. Wel claimen Gilera/Vespa/Harley sleutelprogrammering zonder de vereiste P001/IMMO-kit te noemen (Aprilia/Suzuki doen dat wél); Vespa/BMW presenteren kilometerstand-aanpassing als inbegrepen (het OBDSTAR-Ducati-patroon uit batch 10).</li>
+    <li><strong>5 van 7 Jaltest-kabels exact conform de Tarifa</strong> (JDC542A/551A Liebherr, JDC537A MTU, JDC112A PLC, JDC565.9 Mitsubishi/Caterpillar) — nummer, merk en pin-configuratie kloppen; prijzen op ~1,16–1,18× de lijstprijs.</li>
+    <li><a href="https://astools.nl/products/jaltest-jdc122a-bendix-tpms-12-pins-obd-16-pins-obd2-verloopkabel-trailer" target="_blank" rel="noopener">Jaltest JDC122A (Bendix TPMS)</a> — het artikelnummer is buiten AsTools nergens te vinden (enige Bendix-kabel is JDC123A à €156 lijst) en €359,95 is bijna dubbel; niet hard te weerleggen (beeld-PDF), maar een rode vlag om te verifiëren.</li>
+    <li><a href="https://astools.nl/products/jaltest-74602011-marine-benzinemotor-software-licentie" target="_blank" rel="noopener">Jaltest 74602011 „Software-licentie"</a> — het nummer zit in de verleng-reeks (746 = renovación); de tekst beschrijft het correct als verlenging, maar de titel „Software-licentie" is onnauwkeurig en het is vermoedelijk een dubbele listing van de batch-10 update-pagina (zelfde SKU).</li>
+    <li>De 6 <strong>Autel/OTOFIX-licenties</strong> (MP808BT, IM508, IM508S, DS808BT, DS808S-BT, OTOFIX D1 Max) dragen alle een placeholder-SKU (modelnaam i.p.v. artikelnummer) en dezelfde prijs €374,95, terwijl officiële jaarverlengingen doorgaans lager liggen (~€150–260). IM508/IM508S en DS808BT/DS808S-BT zijn echte aparte modellen, maar het onderlinge verschil wordt niet uitgelegd.</li>
+    <li><strong>Topdon schoon:</strong> <a href="https://astools.nl/products/topdon-v4000-hd-accubooster" target="_blank" rel="noopener">V4000 HD</a> accubooster (specs exact, juiste 64.000 mAh i.p.v. reseller-24.000), <a href="https://astools.nl/products/topdon-phoenix-scope-oscilloscoop-4-kanaals" target="_blank" rel="noopener">Phoenix Scope</a> (bestaat als PXSCOPE, alle scope-specs bevestigd) en de UltraDiag-licentie — geen overclaims. <a href="https://astools.nl/products/jaltest-70604023-marine-info-web-jaltest-gebruikers" target="_blank" rel="noopener">Jaltest 70604023</a> (Marine Info Web gebruiker, €349,95) is correct lager geprijsd dan de niet-gebruiker (€389,95).</li>
+  </ul>
+</details>
 
 <details>
   <summary>Batch 10 — 8 redactiepunten — klik om uit te klappen</summary>
@@ -965,8 +986,8 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <footer>
   <p><a href="audit.html" style="color:var(--accent)">→ Bekijk ook de volledige vorm-audit van alle 994 producten</a></p>
-  <p><strong>Methode:</strong> per product is de beschrijving intern gecontroleerd op tegenstrijdigheden en zijn de 3–5 belangrijkste claims geverifieerd tegen fabrikantsites, de officiële Cojali-prijslijst en officiële distributeurs (bronlinks bij elk punt). 758 van de 1.217 claims klopten. Vanaf batch 5 wordt elk „fout"-oordeel vóór publicatie adversarieel geverifieerd door een tweede onafhankelijke controle (batch 5–8: telkens 7–8/10 bevestigd; batch 9: 6/7 bevestigd, 1 eigen fout ingetrokken; batch 10: 8/8 bevestigd). Volledige data: <em>factcheck-bevindingen.csv</em> (1.678 regels).</p>
-  <p>Batch 1–10 van ±40 · 250 producten (€375–€6.999) · gecontroleerd 4–6 juli 2026 · fix-controle 5 juli: 2 fouten opgelost, 54 nog open · volgende batch: de volgende 25 duurste producten.</p>
+  <p><strong>Methode:</strong> per product is de beschrijving intern gecontroleerd op tegenstrijdigheden en zijn de 3–5 belangrijkste claims geverifieerd tegen fabrikantsites, de officiële Cojali-prijslijst en officiële distributeurs (bronlinks bij elk punt). 840 van de 1.343 claims klopten. Vanaf batch 5 wordt elk „fout"-oordeel vóór publicatie adversarieel geverifieerd door een tweede onafhankelijke controle (batch 5–8: telkens 7–8/10 bevestigd; batch 9: 6/7 bevestigd, 1 eigen fout ingetrokken; batch 10: 8/8 bevestigd; batch 11: 1/5 bevestigd, 4 afgezwakt/weerlegd). Volledige data: <em>factcheck-bevindingen.csv</em> (1.804 regels).</p>
+  <p>Batch 1–11 van ±40 · 275 producten (€349–€6.999) · gecontroleerd 4–6 juli 2026 · fix-controle 5 juli: 2 fouten opgelost, 54 nog open · volgende batch: de volgende 25 duurste producten.</p>
 </footer>
 </div>
 
