@@ -105,14 +105,14 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <div class="omslag">
 <header class="kop">
-  <p class="eyebrow">AsTools.nl · Feitencontrole · Batch 1–16 van ±40</p>
-  <h1>De 400 duurste producten, gecontroleerd op feiten</h1>
+  <p class="eyebrow">AsTools.nl · Feitencontrole · Batch 1–17 van ±40</p>
+  <h1>De 425 duurste producten, gecontroleerd op feiten</h1>
   <p class="sub">Elke beschrijving is intern gecheckt op tegenstrijdigheden én extern geverifieerd tegen de fabrikant (Jaltest/Cojali, Autel, Topdon, OBDSTAR, OTOFIX, Launch, Xhorse, CarLabImmo, Autool). Prijsrange €399–€6.999. Vanaf batch 5 wordt elk „fout"-oordeel bovendien adversarieel getoetst door een tweede, onafhankelijke controle vóór publicatie. Klik op een productnaam om de pagina in de shop te openen.</p>
   <div class="tegels">
-    <div class="tegel"><span class="n">1.834</span><span class="l">claims gecontroleerd</span></div>
-    <div class="tegel ok"><span class="n">1.148</span><span class="l">kloppen (met bron)</span></div>
-    <div class="tegel fout"><span class="n">104</span><span class="l">aantoonbaar fout</span></div>
-    <div class="tegel twijfel"><span class="n">433</span><span class="l">twijfel</span></div>
+    <div class="tegel"><span class="n">1.918</span><span class="l">claims gecontroleerd</span></div>
+    <div class="tegel ok"><span class="n">1.200</span><span class="l">kloppen (met bron)</span></div>
+    <div class="tegel fout"><span class="n">106</span><span class="l">aantoonbaar fout</span></div>
+    <div class="tegel twijfel"><span class="n">458</span><span class="l">twijfel</span></div>
   </div>
 </header>
 
@@ -700,6 +700,20 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 </article>
 
 <article class="kaart fout">
+  <h3><a href="https://astools.nl/products/obdstar-benz-fbs3-kit" target="_blank" rel="noopener">OBDSTAR BENZ FBS3 Kit</a> — verkeerde Mercedes-chassiscodes <span class="prijs">€159,95 · batch 17</span></h3>
+  <p>De inhoud, functies en prijs kloppen, maar de gekoppelde Mercedes-chassiscodes zitten fout: <strong>„GLK-Class (W204/W208)"</strong> — W208 is de CLK, geen GLK (de GLK is X204); en <strong>„SLC-Class (W197)" + „SLS-Class (W197)"</strong> — dezelfde code aan twee modellen, terwijl de SLS de C197/R197 is en de SLC de R172. Omdat een FBS3-sleutelkit per chassis compatibel is, kan een verkeerde code een koper misleiden over de dekking van zijn voertuig.</p>
+  <p class="fix">→ Chassiscodes corrigeren: GLK = X204, SLC = R172, SLS = C197/R197.</p>
+  <span class="bron">Bron: <a href="https://en.wikipedia.org/wiki/Mercedes-Benz_GLK-Class" target="_blank" rel="noopener">Mercedes chassiscodes (GLK=X204)</a> · adversarieel bevestigd</span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/jaltest-mercury-tohatsu-6-pins-obd-26-pins-db26-verloopkabel-motorboot" target="_blank" rel="noopener">Jaltest (JDC632.9) Mercury/Tohatsu-kabel</a> — verkeerd vermogensbereik <span class="prijs">€169,95 · batch 17</span></h3>
+  <p>De pagina noemt de kabel geschikt voor buitenboordmotoren van <strong>„15-30 pk"</strong>, maar JDC632.9 is officieel de <strong>10-20 HP</strong>-kabel. Het bereik <strong>25-30 pk wordt gedekt door een andere kabel (JDC624.9)</strong>. De bovengrens van 30 pk is dus aantoonbaar onjuist.</p>
+  <p class="fix">→ Vermogensbereik corrigeren naar 10-20 pk (voor 25-30 pk verwijzen naar JDC624.9).</p>
+  <span class="bron">Bron: <a href="https://www.jaltest.com/en/article/JDC624.9/mercury-and-tohatsu-18-pin-diagnostics-cable-models-with-power-range-25-30-hp/" target="_blank" rel="noopener">jaltest.com (JDC624.9 = 25-30 HP)</a> · adversarieel bevestigd</span>
+</article>
+
+<article class="kaart fout">
   <h3><a href="https://astools.nl/products/jaltest-new-holland-5-pins-obd-16-pins-obd2-verloopkabel-landbouwvoertuig" target="_blank" rel="noopener">Jaltest (JDC508A) New Holland-kabel</a> — verkeerde modeldekking <span class="prijs">€179,95 · batch 16</span></h3>
   <p>De pagina noemt de kabel geschikt voor de moderne New Holland <strong>T4/T5/T6/T7/T8/T9/TD5/TK</strong>-series, maar de Cojali-Tarifa én álle distributeurs omschrijven JDC508A als de <strong>„New Holland Serie TN"</strong> (+ Case) — een oudere, smallere tractorserie. De 5-pins connector die de pagina zelf noemt is juist de TN/TN2-aansluiting; de T4-T9-modellen gebruiken andere connectoren. AsTools is de enige bron die de T-serie aan dit nummer koppelt, en laat „Case" en „TN" volledig weg.</p>
   <p class="fix">→ Modeldekking corrigeren naar de New Holland/Case TN-serie.</p>
@@ -847,6 +861,20 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <h2><span class="chip info">Redactie</span> Kleine punten per pagina</h2>
 <p class="intro">Geen fouten die een koop beïnvloeden, wel slordigheden die opvallen bij deze prijsklasse.</p>
+
+<details>
+  <summary>Batch 17 — 8 redactiepunten — klik om uit te klappen</summary>
+  <ul class="lijstje">
+    <li><strong>Geen enkele „programmeren"-overclaim meer:</strong> op alle licentiepagina's van deze batch (MK808BT, CRP429/CRP429C, P50) is het woord „programmeren" afwezig of terecht — de opschoning van dat patroon lijkt afgerond in dit prijssegment.</li>
+    <li><strong>13 Jaltest-kabels — allemaal bestaand, correcte merk/sector.</strong> Mooie details: <a href="https://astools.nl/products/jaltest-deutz-fahr-same-lamborghini-14-pins-obd-16-pins-obd2-verloopkabel-landbouwvoertuig" target="_blank" rel="noopener">„Lamborghini"</a> is correct geduid als Trattori (tractoren, geen sportauto); de <a href="https://astools.nl/products/jaltest-man-8-pins-obd-16-pins-obd2-verloopkabel-motorboot" target="_blank" rel="noopener">MAN JDC620A</a> is terecht de marine-kabel (niet de truck-kabel).</li>
+    <li><strong>SGW zonder tokens:</strong> de <a href="https://astools.nl/products/jaltest-jdc408a-renault-nissan-16-32-pins-sgw-16-pins-obd2-verloopkabel" target="_blank" rel="noopener">Renault/Nissan SGW-kabel (JDC408A)</a> is een pure hardware-bypass — géén pay-per-use tokens zoals de Topdon Renault/Nissan-bundel uit batch 6.</li>
+    <li><a href="https://astools.nl/products/jaltest-man-37-pins-obd1-16-pins-obd2-verloopkabel-bedrijfs-en-werkvoertuig" target="_blank" rel="noopener">MAN JDC210A</a> — lijst de moderne TG-serie op terwijl de Tarifa „MAN Serie 2000" (oudere F/M/L2000) noemt; te breed, maar de vroegste TGA overlapt qua tijdvak — afgezwakt tot redactiepunt (niet zo hard als de New Holland-fout in batch 16).</li>
+    <li><strong>Nieuw merk VikTec:</strong> de <a href="https://astools.nl/products/vt18190d-jaguar-land-rover-2-0l-ingenium-diesel-timingset-11-delig" target="_blank" rel="noopener">VT18190D</a> JLR Ingenium-timingset is echt — alle vier de JLR OEM-nummers (303-1625/1627/1630/1631) en de motor-/modeldekking kloppen.</li>
+    <li><strong>Launch CRP429 vs CRP429C:</strong> er bestaat geen apart „CRP429"-model — waarschijnlijk een dubbele listing van de CRP429C (beide €159,95; de tweede handle heeft een „-1"-suffix). Beide claimen een betaalde jaarlicentie terwijl de CRP429C breed met „lifetime free update" wordt geadverteerd.</li>
+    <li><strong>Topdon-slordigheden:</strong> de <a href="https://astools.nl/products/topdon-artidiag600-s-auto-uitleesapparaat" target="_blank" rel="noopener">ArtiDiag600 S</a> heeft een verzonnen merk „Ghorazli" in de merkenlijst en een accu van 3100 (moet 3350) mAh; de ArtiDiag500 noemt Android 7.0 waar de huidige generatie Android 11 draait. Kleine punten, geen koop-beïnvloedende fouten.</li>
+    <li><strong>Schoon:</strong> OBDSTAR FBS3-functielijst en P50-scope kloppen (alleen de FBS3-chassiscodes fout), Autel MK808BT-licentie zonder overclaim, en Autool SDT203 + LM120+ (89 koudemiddelen) volledig correct.</li>
+  </ul>
+</details>
 
 <details>
   <summary>Batch 16 — 8 redactiepunten — klik om uit te klappen (grens van 400 producten / 40% bereikt)</summary>
@@ -1131,8 +1159,8 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <footer>
   <p><a href="audit.html" style="color:var(--accent)">→ Bekijk ook de volledige vorm-audit van alle 994 producten</a></p>
-  <p><strong>Methode:</strong> per product is de beschrijving intern gecontroleerd op tegenstrijdigheden en zijn de 3–5 belangrijkste claims geverifieerd tegen fabrikantsites, de officiële Cojali-prijslijst en officiële distributeurs (bronlinks bij elk punt). 1.148 van de 1.834 claims klopten. Vanaf batch 5 wordt elk „fout"-oordeel vóór publicatie adversarieel geverifieerd door een tweede onafhankelijke controle (batch 5–8: telkens 7–8/10 bevestigd; batch 9: 6/7 bevestigd, 1 eigen fout ingetrokken; batch 10: 8/8 bevestigd; batch 11: 1/5 bevestigd; batch 12: 4/8 bevestigd; batch 13: 3/8 (de 5 „weerlegde" programmeren-meldingen bleken bij batch 14 échte overclaims die inmiddels gefixt zijn); batch 14: 7 fouten (3 open, 4 gefixt); batch 15: 4 fouten (3 open, 1 gefixt); batch 16: 2 fouten (1 open: JDC508A New Holland; 1 gefixt: CRP919X)). Volledige data: <em>factcheck-bevindingen.csv</em> (2.295 regels).</p>
-  <p>Batch 1–16 van ±40 · 400 producten (€175–€6.999) · gecontroleerd 4–7 juli 2026 · fix-controle 5 juli: 2 fouten opgelost, 54 nog open · volgende batch: de volgende 25 duurste producten.</p>
+  <p><strong>Methode:</strong> per product is de beschrijving intern gecontroleerd op tegenstrijdigheden en zijn de 3–5 belangrijkste claims geverifieerd tegen fabrikantsites, de officiële Cojali-prijslijst en officiële distributeurs (bronlinks bij elk punt). 1.200 van de 1.918 claims klopten. Vanaf batch 5 wordt elk „fout"-oordeel vóór publicatie adversarieel geverifieerd door een tweede onafhankelijke controle (batch 5–8: telkens 7–8/10 bevestigd; batch 9: 6/7 bevestigd, 1 eigen fout ingetrokken; batch 10: 8/8 bevestigd; batch 11: 1/5 bevestigd; batch 12: 4/8 bevestigd; batch 13: 3/8 (de 5 „weerlegde" programmeren-meldingen bleken bij batch 14 échte overclaims die inmiddels gefixt zijn); batch 14: 7 fouten (3 open, 4 gefixt); batch 15: 4 fouten (3 open, 1 gefixt); batch 16: 2 fouten (1 open, 1 gefixt); batch 17: 2 fouten (FBS3-chassiscodes + JDC632.9 vermogensbereik, beide open)). Volledige data: <em>factcheck-bevindingen.csv</em> (2.379 regels).</p>
+  <p>Batch 1–17 van ±40 · 425 producten (€159–€6.999) · gecontroleerd 4–7 juli 2026 · fix-controle 5 juli: 2 fouten opgelost, 54 nog open · volgende batch: de volgende 25 duurste producten.</p>
 </footer>
 </div>
 
