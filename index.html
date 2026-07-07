@@ -105,14 +105,14 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <div class="omslag">
 <header class="kop">
-  <p class="eyebrow">AsTools.nl · Feitencontrole · Batch 1–12 van ±40</p>
-  <h1>De 300 duurste producten, gecontroleerd op feiten</h1>
+  <p class="eyebrow">AsTools.nl · Feitencontrole · Batch 1–13 van ±40</p>
+  <h1>De 325 duurste producten, gecontroleerd op feiten</h1>
   <p class="sub">Elke beschrijving is intern gecheckt op tegenstrijdigheden én extern geverifieerd tegen de fabrikant (Jaltest/Cojali, Autel, Topdon, OBDSTAR, OTOFIX, Launch, Xhorse, CarLabImmo, Autool). Prijsrange €399–€6.999. Vanaf batch 5 wordt elk „fout"-oordeel bovendien adversarieel getoetst door een tweede, onafhankelijke controle vóór publicatie. Klik op een productnaam om de pagina in de shop te openen.</p>
   <div class="tegels">
-    <div class="tegel"><span class="n">1.461</span><span class="l">claims gecontroleerd</span></div>
-    <div class="tegel ok"><span class="n">919</span><span class="l">kloppen (met bron)</span></div>
-    <div class="tegel fout"><span class="n">88</span><span class="l">aantoonbaar fout</span></div>
-    <div class="tegel twijfel"><span class="n">326</span><span class="l">twijfel</span></div>
+    <div class="tegel"><span class="n">1.574</span><span class="l">claims gecontroleerd</span></div>
+    <div class="tegel ok"><span class="n">988</span><span class="l">kloppen (met bron)</span></div>
+    <div class="tegel fout"><span class="n">91</span><span class="l">aantoonbaar fout</span></div>
+    <div class="tegel twijfel"><span class="n">360</span><span class="l">twijfel</span></div>
   </div>
 </header>
 
@@ -699,6 +699,28 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 </article>
 
 <article class="kaart fout">
+  <h3><a href="https://astools.nl/products/jaltest-cummins-4-60-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">Jaltest (JDCM2150) Cummins ECU-kabel</a> — verkeerde ECU's in de lijst <span class="prijs">€284,95 · batch 13</span></h3>
+  <p>Tweede geval van het Cummins-kabelpatroon (na JDCM2670/2880 in batch 11): de JDCM2150 is uitsluitend voor de Cummins <strong>CM2150</strong>-ECU (4+60-pins), maar de „compatibele ECU's"-lijst noemt óók <strong>CM2250</strong> en <strong>CM2350</strong>. Die vereisen aparte kabels (JDCM2250 = 60-pins, JDCM2350/2450 = 96-pins) met een fysiek andere connector — aantoonbaar met AsTools' eigen zusterpagina's. De 4+60-pins stekker past niet op een 60- of 96-pins ECU.</p>
+  <p class="fix">→ CM2250 en CM2350 uit de compatibiliteitslijst verwijderen (alleen CM2150).</p>
+  <span class="bron">Bron: <a href="https://www.jaltest.com/en/article/JDCM2150/cummins-ecm-cm2150-insulation-harness/" target="_blank" rel="noopener">jaltest.com (JDCM2150 = alleen CM2150)</a> · adversarieel bevestigd</span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/topdon-t-ninja-t1000-update-licentie" target="_blank" rel="noopener">Topdon „T-Ninja T1000"-licentie</a> — niet-bestaand model + dubbele listing <span class="prijs">€284,95 · batch 13</span></h3>
+  <p>Er bestaat geen Topdon-model <strong>„T-Ninja T1000"</strong> (met extra T) — het officiële model heet <strong>T-Ninja 1000</strong>. Bovendien staat exact hetzelfde product óók op een tweede pagina (<a href="https://astools.nl/products/topdon-t-ninja-1000-update-licentie" target="_blank" rel="noopener">t-ninja-1000</a>, batch 12): een dubbele listing met afwijkende modelnaam. De tekst zelf wisselt door elkaar tussen „T1000" en „1000".</p>
+  <p class="fix">→ Eén pagina behouden en de modelnaam corrigeren naar „T-Ninja 1000".</p>
+  <span class="bron">Bron: <a href="https://www.topdon.com/products/t-ninja1000" target="_blank" rel="noopener">topdon.com (T-Ninja1000)</a> · adversarieel bevestigd</span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/autel-maxivideo-mv480-inspectiecamera-8-5-mm" target="_blank" rel="noopener">Autel MaxiVideo MV480</a> — schermresolutie <span class="prijs">€274,95 · batch 13</span></h3>
+  <dl class="spec">
+    <dt>Scherm 1280×720</dt><dd>→ <span class="goed">1200×720</span> (Autel-officieel; kleine verschrijving, alle overige specs kloppen)</dd>
+  </dl>
+  <span class="bron">Bron: <a href="https://autel.us/product/maxivideo-mv480/" target="_blank" rel="noopener">autel.us</a> · adversarieel bevestigd</span>
+</article>
+
+<article class="kaart fout">
   <h3><a href="https://astools.nl/products/autel-maxiim-impka-adapter-kit-12-delig" target="_blank" rel="noopener">Autel „IMPKA" Adapter Kit</a> — verkeerde naam + 12 vs 13 adapters <span class="prijs">€299,95 · batch 12</span></h3>
   <p>Twee fouten op één pagina: (1) de kit heet overal <strong>„IMPKA"</strong> (7×), maar Autels officiële naam is <strong>„IMKPA"</strong> (Key Programming Accessory) — een letteromwisseling die in geen enkele officiële bron voorkomt. (2) Titel, URL én paklijst zeggen <strong>12-delig</strong> (en de tabel somt 12 APB-codes op), maar de beschrijving én het veld „Aantal adapters" zeggen <strong>13</strong>. De officiële IMKPA-kit heeft 12 adapters; de „13" is intern tegenstrijdig én feitelijk fout.</p>
   <p class="fix">→ Naam corrigeren naar IMKPA en „13" overal vervangen door 12.</p>
@@ -786,6 +808,20 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <h2><span class="chip info">Redactie</span> Kleine punten per pagina</h2>
 <p class="intro">Geen fouten die een koop beïnvloeden, wel slordigheden die opvallen bij deze prijsklasse.</p>
+
+<details>
+  <summary>Batch 13 — 8 redactiepunten — klik om uit te klappen</summary>
+  <ul class="lijstje">
+    <li><strong>⟲ Vijf „programmeren"-kandidaten weerlegd:</strong> op de licenties van MP900-BT, MP900-BT Kit, MS906, MS906S en MS80 Basic zou „online programmeren" beloofd worden — maar bij live-controle (WebFetch + raw HTML) komt het woord op géén van de pagina's voor. Onze eigen fact-check projecteerde het 906-patroon; de verificatieronde ving het telkens af. Een onterechte beschuldiging is erger dan een gemiste fout.</li>
+    <li><strong>Cummins-kabelserie grotendeels correct:</strong> van de 4 gecontroleerde Cummins-ECU-kabels dragen JDCM2250, JDCM850 en JDCM2350/2450 elk de juiste ECU; alleen de <a href="https://astools.nl/products/jaltest-cummins-4-60-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">JDCM2150</a> heeft de verkeerde ECU-lijst (zie „Direct aanpakken"). De Bobcat JDC539A is volledig correct.</li>
+    <li><strong>Info Web/Info Plus/FCA correct:</strong> <a href="https://astools.nl/products/jaltest-info-web-licentie-mhe-jaltest-gebruikers-kopie" target="_blank" rel="noopener">MHE-gebruiker 70604007</a>, <a href="https://astools.nl/products/jaltest-70605005-info-plus" target="_blank" rel="noopener">Info Plus 70605005</a> en de <a href="https://astools.nl/products/jaltest-fca-security-gateway-licentie" target="_blank" rel="noopener">Jaltest FCA SGW 70607001</a> (jaarlicentie) kloppen qua nummer en rol. De MHE-pagina is wel een Shopify-„-kopie"-duplicaat, en de FCA-pagina beperkt onterecht tot Link V9 waar Jaltest „V8 of later" zegt.</li>
+    <li><a href="https://astools.nl/products/jaltest-meetkabel-en-testpennen-set-120-delig" target="_blank" rel="noopener">Testpennenset 50003019</a> — het kop-getal „120-delig" klopt met de fabrikant, maar de opgesomde inhoud telt op tot ~105; de detaillijst is onvolledig (redactiepunt, geen feitfout).</li>
+    <li><strong>Autel VCI's correct:</strong> <a href="https://astools.nl/products/autel-maxivci-v100-interface" target="_blank" rel="noopener">V100</a> (alleen CAN) en <a href="https://astools.nl/products/autel-maxivci-v200-interface" target="_blank" rel="noopener">V200</a> (CAN FD/DoIP) hebben de juiste specs zonder verwisseling; wel een onlogische prijs (oudere V100 €259,95 > capabelere V200 €254,95) — teken van een uniforme placeholder-prijs over de hele batch.</li>
+    <li><strong>Schoon ondanks eerdere hardware-fouten:</strong> de licentiepagina's van <a href="https://astools.nl/products/topdon-artidiag-900-bt-update-licentie" target="_blank" rel="noopener">ArtiDiag 900 BT</a> (batch 8: „3 jaar"/Android 11) en <a href="https://astools.nl/products/launch-crp129-hd-update-licentie" target="_blank" rel="noopener">Launch CRP129 HD</a> (batch 9: verkeerd spec-blok) herhalen die fouten NIET — ze bevatten geen hardware-specs. T-Ninja-, ArtiDiag- en CRP129-licenties claimen alle correct 1 jaar.</li>
+    <li><a href="https://astools.nl/products/topdon-v4500-plus-accubooster" target="_blank" rel="noopener">Topdon V4500 Plus</a> accubooster (4500A/32000mAh/PD100W/500lm/IP65) en de <a href="https://astools.nl/products/autool-svb408-inspectiecamera-3-9-mm" target="_blank" rel="noopener">Autool SVB408</a> inspectiecamera: alle specs kloppen, geen verwisseling.</li>
+    <li><strong>OBDSTAR-licenties (Key Master 5, MS80 Basic, DC706) overclaimen geen functies</strong> — alle drie €264,95 (uniforme prijs) met een placeholder-SKU en 24-uursbelofte, het bekende structurele patroon bij de licentiepagina's.</li>
+  </ul>
+</details>
 
 <details>
   <summary>Batch 12 — 8 redactiepunten — klik om uit te klappen</summary>
@@ -1014,8 +1050,8 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <footer>
   <p><a href="audit.html" style="color:var(--accent)">→ Bekijk ook de volledige vorm-audit van alle 994 producten</a></p>
-  <p><strong>Methode:</strong> per product is de beschrijving intern gecontroleerd op tegenstrijdigheden en zijn de 3–5 belangrijkste claims geverifieerd tegen fabrikantsites, de officiële Cojali-prijslijst en officiële distributeurs (bronlinks bij elk punt). 919 van de 1.461 claims klopten. Vanaf batch 5 wordt elk „fout"-oordeel vóór publicatie adversarieel geverifieerd door een tweede onafhankelijke controle (batch 5–8: telkens 7–8/10 bevestigd; batch 9: 6/7 bevestigd, 1 eigen fout ingetrokken; batch 10: 8/8 bevestigd; batch 11: 1/5 bevestigd; batch 12: 4/8 bevestigd, 4 weerlegd). Volledige data: <em>factcheck-bevindingen.csv</em> (1.922 regels).</p>
-  <p>Batch 1–12 van ±40 · 300 producten (€284–€6.999) · gecontroleerd 4–7 juli 2026 · fix-controle 5 juli: 2 fouten opgelost, 54 nog open · volgende batch: de volgende 25 duurste producten.</p>
+  <p><strong>Methode:</strong> per product is de beschrijving intern gecontroleerd op tegenstrijdigheden en zijn de 3–5 belangrijkste claims geverifieerd tegen fabrikantsites, de officiële Cojali-prijslijst en officiële distributeurs (bronlinks bij elk punt). 988 van de 1.574 claims klopten. Vanaf batch 5 wordt elk „fout"-oordeel vóór publicatie adversarieel geverifieerd door een tweede onafhankelijke controle (batch 5–8: telkens 7–8/10 bevestigd; batch 9: 6/7 bevestigd, 1 eigen fout ingetrokken; batch 10: 8/8 bevestigd; batch 11: 1/5 bevestigd; batch 12: 4/8 bevestigd; batch 13: 3/8 bevestigd, 5 weerlegd — waaronder 5 valse programmeren-beschuldigingen). Volledige data: <em>factcheck-bevindingen.csv</em> (2.035 regels).</p>
+  <p>Batch 1–13 van ±40 · 325 producten (€249–€6.999) · gecontroleerd 4–7 juli 2026 · fix-controle 5 juli: 2 fouten opgelost, 54 nog open · volgende batch: de volgende 25 duurste producten.</p>
 </footer>
 </div>
 
