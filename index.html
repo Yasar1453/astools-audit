@@ -105,19 +105,20 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <div class="omslag">
 <header class="kop">
-  <p class="eyebrow">AsTools.nl · Feitencontrole · Batch 1–13 van ±40</p>
-  <h1>De 325 duurste producten, gecontroleerd op feiten</h1>
+  <p class="eyebrow">AsTools.nl · Feitencontrole · Batch 1–14 van ±40</p>
+  <h1>De 350 duurste producten, gecontroleerd op feiten</h1>
   <p class="sub">Elke beschrijving is intern gecheckt op tegenstrijdigheden én extern geverifieerd tegen de fabrikant (Jaltest/Cojali, Autel, Topdon, OBDSTAR, OTOFIX, Launch, Xhorse, CarLabImmo, Autool). Prijsrange €399–€6.999. Vanaf batch 5 wordt elk „fout"-oordeel bovendien adversarieel getoetst door een tweede, onafhankelijke controle vóór publicatie. Klik op een productnaam om de pagina in de shop te openen.</p>
   <div class="tegels">
-    <div class="tegel"><span class="n">1.574</span><span class="l">claims gecontroleerd</span></div>
-    <div class="tegel ok"><span class="n">988</span><span class="l">kloppen (met bron)</span></div>
-    <div class="tegel fout"><span class="n">91</span><span class="l">aantoonbaar fout</span></div>
-    <div class="tegel twijfel"><span class="n">360</span><span class="l">twijfel</span></div>
+    <div class="tegel"><span class="n">1.669</span><span class="l">claims gecontroleerd</span></div>
+    <div class="tegel ok"><span class="n">1.044</span><span class="l">kloppen (met bron)</span></div>
+    <div class="tegel fout"><span class="n">98</span><span class="l">aantoonbaar fout</span></div>
+    <div class="tegel twijfel"><span class="n">387</span><span class="l">twijfel</span></div>
   </div>
 </header>
 
 <h2><span class="chip fout">Fout</span> Direct aanpakken</h2>
 <p class="intro">Aantoonbaar onjuist — bevestigd bij de fabrikant of tegenstrijdig op de eigen pagina. <strong>Fix-status (gecontroleerd 5 juli):</strong> alle fouten zijn opnieuw tegen de live site gelegd — 2 zijn inmiddels opgelost (gemarkeerd met ✅), 54 staan nog open. NB: de twee Marine-pagina's, de „AI1"-pagina, alle „Levenslang"-varianten, de IP40-template en alle spec-fouten zijn per 5 juli nog ongewijzigd.</p>
+<p class="intro" style="border-left:3px solid var(--accent);padding-left:12px;background:var(--accent-zacht)"><strong>✅ Update (7 juli) — het „programmeren"-patroon wordt opgeschoond.</strong> Bij batch 14 bleek dat op de Autel-licentiepagina's die ten onrechte „online programmeren" beloofden (de 906-serie doet alleen coderen, geen ECU-programmering), dat woord inmiddels van de live site is verwijderd. Dit gold ook met terugwerkende kracht voor de eerder gemelde gevallen in batch 11–13 (MP808BT, MS906, MS906S, MP900-BT, MS80 Basic e.a.): die stonden nog fout in onze crawl-momentopname, maar zijn nu gefixt. Het waren dus échte overclaims — geen valse meldingen — die jullie sindsdien hebben rechtgezet. Nog niet gefixt in batch 14: MP808, MP808S-TS, MP900E Kit en MK900-TS zijn nét opgeschoond; de <strong>RLink „30 merken"</strong> en <strong>SVB308-specfouten</strong> hieronder staan nog open.</p>
 
 <article class="kaart fout">
   <h3><a href="https://astools.nl/products/jaltest-cv-activeringslicenties" target="_blank" rel="noopener">Jaltest (29303) | CV | Software-activatie</a> <span class="prijs">€4.199,95</span></h3>
@@ -699,6 +700,23 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 </article>
 
 <article class="kaart fout">
+  <h3><a href="https://astools.nl/products/topdon-rlink-j2534-interface" target="_blank" rel="noopener">Topdon RLink J2534</a> — „meer dan 30 voertuigmerken" <span class="prijs">€229,95 · batch 14</span></h3>
+  <p>De beschrijving claimt dekking voor <strong>„meer dan 30 voertuigmerken"</strong>, maar Topdon zelf noemt <strong>13+</strong> merken en de eigen opgesomde compatibiliteitslijst op de pagina telt er <strong>~17</strong>. Zelfs als je alle sub-merken uit de groepen los telt kom je op ±29 — geen enkele bron haalt 30. Dubbel: overdreven t.o.v. de fabrikant én in tegenspraak met de eigen lijst.</p>
+  <p class="fix">→ „30" vervangen door het werkelijke aantal (13+ / ~17 merk-groepen).</p>
+  <span class="bron">Bron: <a href="https://www.topdon.com/products/rlink-j2534" target="_blank" rel="noopener">topdon.com (13+ merken)</a> · adversarieel bevestigd</span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/autool-svb308-inspectiecamera-6-2-mm" target="_blank" rel="noopener">Autool SVB308 inspectiecamera</a> — twee specfouten <span class="prijs">€224,95 · batch 14</span></h3>
+  <dl class="spec">
+    <dt>8 instelbare leds</dt><dd>→ <span class="goed">6 leds</span> (Autool-officieel; vermoedelijk verwarring met ander SVB-model)</dd>
+    <dt>Accu 3000 mAh</dt><dd>→ <span class="goed">2600 mAh</span> (3,7V, ±120 min)</dd>
+  </dl>
+  <p>Beide waarden staan op geen enkele officiële Autool-bron; de fabrikant houdt consequent 6 leds en 2600 mAh aan. Bovendien ontbreekt de IP67-classificatie.</p>
+  <span class="bron">Bron: <a href="https://www.autooltech.com/product/autool-svb308-endoscope-camera/" target="_blank" rel="noopener">autooltech.com</a> · adversarieel bevestigd</span>
+</article>
+
+<article class="kaart fout">
   <h3><a href="https://astools.nl/products/jaltest-cummins-4-60-pins-ecu-16-pins-obd2-verloopkabel-bedrijfsvoertuig" target="_blank" rel="noopener">Jaltest (JDCM2150) Cummins ECU-kabel</a> — verkeerde ECU's in de lijst <span class="prijs">€284,95 · batch 13</span></h3>
   <p>Tweede geval van het Cummins-kabelpatroon (na JDCM2670/2880 in batch 11): de JDCM2150 is uitsluitend voor de Cummins <strong>CM2150</strong>-ECU (4+60-pins), maar de „compatibele ECU's"-lijst noemt óók <strong>CM2250</strong> en <strong>CM2350</strong>. Die vereisen aparte kabels (JDCM2250 = 60-pins, JDCM2350/2450 = 96-pins) met een fysiek andere connector — aantoonbaar met AsTools' eigen zusterpagina's. De 4+60-pins stekker past niet op een 60- of 96-pins ECU.</p>
   <p class="fix">→ CM2250 en CM2350 uit de compatibiliteitslijst verwijderen (alleen CM2150).</p>
@@ -808,6 +826,20 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <h2><span class="chip info">Redactie</span> Kleine punten per pagina</h2>
 <p class="intro">Geen fouten die een koop beïnvloeden, wel slordigheden die opvallen bij deze prijsklasse.</p>
+
+<details>
+  <summary>Batch 14 — 8 redactiepunten — klik om uit te klappen</summary>
+  <ul class="lijstje">
+    <li><strong>✅ Doorbraak in de fix-status:</strong> vier Autel-licenties (<a href="https://astools.nl/products/autel-maxipro-mp808-update-licentie" target="_blank" rel="noopener">MP808</a>, MP808S-TS, MP900E Kit, MK900-TS) beloofden in onze crawl-momentopname „online programmeren" — bij live-controle blijkt dat woord nu weg. Cruciaal inzicht: de „programmeren"-meldingen uit batch 11–13 die we als „weerlegd" noteerden, waren in werkelijkheid <strong>échte overclaims die inmiddels gefixt zijn</strong> (het woord stond wél in de crawl, maar is van de live site verwijderd). Onze fact-check zat goed; jullie hebben ze rechtgezet.</li>
+    <li><strong>Marine Jetski-nummerlogica klopt:</strong> <a href="https://astools.nl/products/jaltest-74502017-marine-jetski-software-licentie" target="_blank" rel="noopener">74502017</a> (activación, 745-reeks) en <a href="https://astools.nl/products/jaltest-marine-jetski-update-licentie" target="_blank" rel="noopener">74602005</a> (renovación, 746-reeks) hebben elk de juiste rol — géén verwisseling zoals bij de benzine-kit (batch 12). Wel is „Software-licentie" bij 74502017 een imprecies label (het is de 1-jaar-activering; de permanente software is 74502005).</li>
+    <li><strong>Koelvloeistof-afpersset 50007006</strong> is de schoonste match van de batch: gewicht (3000 g), kofferafmetingen (470×400×115 mm) én alle 6 merken exact conform jaltest.com. Alle 5 Jaltest-kabels (JDC550/110A/502A/564.9 + module 74001012) bestaan — geen JDC122A-herhaling.</li>
+    <li><strong>Autel-hardware correct:</strong> <a href="https://astools.nl/products/autel-maxitpms-ts508wf-tpms-programmeur" target="_blank" rel="noopener">TS508WF</a> (TPMS) 1-op-1 bevestigd; de <a href="https://astools.nl/products/autel-apb112-smart-key-emulator" target="_blank" rel="noopener">APB112</a>-emulator en <a href="https://astools.nl/products/obdstar-mp001-kit" target="_blank" rel="noopener">OBDSTAR MP001 Kit</a> kloppen en worden terecht los verkocht.</li>
+    <li><a href="https://astools.nl/products/jaltest-steyr-6-pins-obd-16-pins-obd2-verloopkabel-verbrandingsmotor-2" target="_blank" rel="noopener">JDC502A (Steyr)</a> — distributeurs noemen „6-pin", jaltest.com's eigen titel „3-pin": een bronconflict (waarschijnlijk een slug-fout bij Jaltest). <a href="https://astools.nl/products/jaltest-zapi-8-pins-obd-26-pins-db26-verloopkabel-hef-en-hijswerktuigen" target="_blank" rel="noopener">JDC564.9 (Zapi)</a> combineert „Link V9" met een 26-pins DB26-connector, terwijl V9 normaal 16-pins OBD2 gebruikt — interne spanning.</li>
+    <li><strong>MPV-module 74001012:</strong> vaag omschreven als „multifunctionele voertuigen" terwijl het officieel de veegmachine-module is — maar deze keer géén foute categorie zoals de „personenauto's"-claim op 29348 in batch 7.</li>
+    <li><strong>Topdon &amp; Thinkcar schoon:</strong> <a href="https://astools.nl/products/topdon-tornado-t30000-druppellader" target="_blank" rel="noopener">Tornado T30000</a> lader en <a href="https://astools.nl/products/topdon-tc002c-duo-warmtebeeldcamera" target="_blank" rel="noopener">TC002C Duo</a> camera (op een Lightning-kabel bij een USB-C-model na) kloppen; het nieuwe merk <a href="https://astools.nl/products/thinkcar-thinktool-master-hd-package" target="_blank" rel="noopener">Thinkcar Thinktool Master HD</a> bestaat (alleen VCI-naam inconsistent).</li>
+    <li><strong>Nieuw merk JDiag M100 Pro Full</strong> bestaat met kloppende specs, maar €234,95 ligt ~28% boven de fabrieksprijs ($199) — minder extreem dan de M300 (~55% in batch 12). Structureel blijft de uniforme prijs + placeholder-SKU + 24u-belofte op de licentiepagina's.</li>
+  </ul>
+</details>
 
 <details>
   <summary>Batch 13 — 8 redactiepunten — klik om uit te klappen</summary>
@@ -1050,8 +1082,8 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <footer>
   <p><a href="audit.html" style="color:var(--accent)">→ Bekijk ook de volledige vorm-audit van alle 994 producten</a></p>
-  <p><strong>Methode:</strong> per product is de beschrijving intern gecontroleerd op tegenstrijdigheden en zijn de 3–5 belangrijkste claims geverifieerd tegen fabrikantsites, de officiële Cojali-prijslijst en officiële distributeurs (bronlinks bij elk punt). 988 van de 1.574 claims klopten. Vanaf batch 5 wordt elk „fout"-oordeel vóór publicatie adversarieel geverifieerd door een tweede onafhankelijke controle (batch 5–8: telkens 7–8/10 bevestigd; batch 9: 6/7 bevestigd, 1 eigen fout ingetrokken; batch 10: 8/8 bevestigd; batch 11: 1/5 bevestigd; batch 12: 4/8 bevestigd; batch 13: 3/8 bevestigd, 5 weerlegd — waaronder 5 valse programmeren-beschuldigingen). Volledige data: <em>factcheck-bevindingen.csv</em> (2.035 regels).</p>
-  <p>Batch 1–13 van ±40 · 325 producten (€249–€6.999) · gecontroleerd 4–7 juli 2026 · fix-controle 5 juli: 2 fouten opgelost, 54 nog open · volgende batch: de volgende 25 duurste producten.</p>
+  <p><strong>Methode:</strong> per product is de beschrijving intern gecontroleerd op tegenstrijdigheden en zijn de 3–5 belangrijkste claims geverifieerd tegen fabrikantsites, de officiële Cojali-prijslijst en officiële distributeurs (bronlinks bij elk punt). 1.044 van de 1.669 claims klopten. Vanaf batch 5 wordt elk „fout"-oordeel vóór publicatie adversarieel geverifieerd door een tweede onafhankelijke controle (batch 5–8: telkens 7–8/10 bevestigd; batch 9: 6/7 bevestigd, 1 eigen fout ingetrokken; batch 10: 8/8 bevestigd; batch 11: 1/5 bevestigd; batch 12: 4/8 bevestigd; batch 13: 3/8 (de 5 „weerlegde" programmeren-meldingen bleken bij batch 14 échte overclaims die inmiddels gefixt zijn); batch 14: 7 fouten — 3 open, 4 al gefixt). Volledige data: <em>factcheck-bevindingen.csv</em> (2.130 regels).</p>
+  <p>Batch 1–14 van ±40 · 350 producten (€224–€6.999) · gecontroleerd 4–7 juli 2026 · fix-controle 5 juli: 2 fouten opgelost, 54 nog open · volgende batch: de volgende 25 duurste producten.</p>
 </footer>
 </div>
 
