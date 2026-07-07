@@ -105,14 +105,14 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <div class="omslag">
 <header class="kop">
-  <p class="eyebrow">AsTools.nl · Feitencontrole · Batch 1–17 van ±40</p>
-  <h1>De 425 duurste producten, gecontroleerd op feiten</h1>
+  <p class="eyebrow">AsTools.nl · Feitencontrole · Batch 1–18 van ±40</p>
+  <h1>De 450 duurste producten, gecontroleerd op feiten</h1>
   <p class="sub">Elke beschrijving is intern gecheckt op tegenstrijdigheden én extern geverifieerd tegen de fabrikant (Jaltest/Cojali, Autel, Topdon, OBDSTAR, OTOFIX, Launch, Xhorse, CarLabImmo, Autool). Prijsrange €399–€6.999. Vanaf batch 5 wordt elk „fout"-oordeel bovendien adversarieel getoetst door een tweede, onafhankelijke controle vóór publicatie. Klik op een productnaam om de pagina in de shop te openen.</p>
   <div class="tegels">
-    <div class="tegel"><span class="n">1.918</span><span class="l">claims gecontroleerd</span></div>
-    <div class="tegel ok"><span class="n">1.200</span><span class="l">kloppen (met bron)</span></div>
-    <div class="tegel fout"><span class="n">106</span><span class="l">aantoonbaar fout</span></div>
-    <div class="tegel twijfel"><span class="n">458</span><span class="l">twijfel</span></div>
+    <div class="tegel"><span class="n">2.002</span><span class="l">claims gecontroleerd</span></div>
+    <div class="tegel ok"><span class="n">1.260</span><span class="l">kloppen (met bron)</span></div>
+    <div class="tegel fout"><span class="n">112</span><span class="l">aantoonbaar fout</span></div>
+    <div class="tegel twijfel"><span class="n">475</span><span class="l">twijfel</span></div>
   </div>
 </header>
 
@@ -700,6 +700,38 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 </article>
 
 <article class="kaart fout">
+  <h3><a href="https://astools.nl/products/jaltest-high-pressure-fuel-circuit-test-kit" target="_blank" rel="noopener">Jaltest (50105182) HP Fuel Circuit Test Kit</a> — meerdere fouten <span class="prijs">€149,95 · batch 18</span></h3>
+  <p>Drie feitelijke fouten op één pagina (bevestigd bij Jaltest én Cojali Parts): (1) het alternatieve nummer heet <strong>„1903030 OAT"</strong> — moet <strong>1903030 DAF</strong> zijn; (2) de compatibiliteitslijst <strong>laat DAF (het hoofdmerk, Paccar MX13) en TATRA weg</strong> en voegt juist <strong>„CNH" en „Terex" toe</strong> die er officieel niet in staan; (3) de motorcode <strong>„M103"</strong> is fout — het is de <strong>MX13</strong> (M103 is een Mercedes-benzinemotor uit de jaren '80). Zelfde patroon als de AdBlue-kit-fout in batch 12.</p>
+  <p class="fix">→ Cross-ref naar DAF, DAF+TATRA toevoegen, CNH/Terex verwijderen, motorcode naar MX13.</p>
+  <span class="bron">Bron: <a href="https://www.jaltest.com/en/article/50105182/high-pressure-fuel-circuit-test-kit/" target="_blank" rel="noopener">jaltest.com (50105182)</a> · adversarieel bevestigd</span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/topdon-v2200air-accubooster" target="_blank" rel="noopener">Topdon V2200Air</a> — accucapaciteit van het verkeerde model <span class="prijs">€149,95 · batch 18</span></h3>
+  <dl class="spec">
+    <dt>Accu 59,2 Wh / 16.000 mAh</dt><dd>→ <span class="goed">44,4 Wh / 12.000 mAh</span> (de 16.000 mAh hoort bij de V2200<strong>Plus</strong>, niet de V2200<strong>Air</strong>) — ~33% te hoog</dd>
+  </dl>
+  <p>Ook „USB-A QC18W" en „IP54" staan niet in de Topdon-specificaties (Topdon EU noemt alleen 5V/3A). Overige specs kloppen.</p>
+  <span class="bron">Bron: <a href="https://eu.topdon.com/products/v2200air" target="_blank" rel="noopener">eu.topdon.com (12.000 mAh)</a> · adversarieel bevestigd</span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/autool-bt880-accutester" target="_blank" rel="noopener">Autool BT880 accutester</a> — verkeerd CCA-bereik <span class="prijs">€149,95 · batch 18</span></h3>
+  <dl class="spec">
+    <dt>CCA-bereik 100–3000</dt><dd>→ <span class="goed">20–2000 CCA</span> (Autool-officieel; beide grenzen wijken af)</dd>
+  </dl>
+  <p>Ook de „6V-ondersteuning" is onwaarschijnlijk (werkspanning 8–30V) en de oscilloscoop/multimeter-functie wordt door Autool niet bevestigd — de BT880 is een accu-/lekstroomtester.</p>
+  <span class="bron">Bron: <a href="https://www.autooltech.com/product/autool-bt880-automotive-battery-tester/" target="_blank" rel="noopener">autooltech.com</a> · adversarieel bevestigd</span>
+</article>
+
+<article class="kaart fout">
+  <h3><a href="https://astools.nl/products/autel-g-box3-kit" target="_blank" rel="noopener">Autel G-BOX3 Kit</a> — onterechte FBS4-claim <span class="prijs">€154,95 · batch 18</span></h3>
+  <p>De kit en kernfuncties kloppen (Mercedes DAS3/FBS3 EIS all-keys-lost, BMW CAS4), maar de pagina claimt óók ondersteuning voor <strong>Mercedes FBS4</strong>. Autel positioneert de G-BOX3 uitsluitend voor <strong>DAS3/FBS3</strong>; FBS4 (de nieuwere, sterk beveiligde immobilizer-generatie) wordt door geen enkele Autel-bron als G-BOX3-functie genoemd.</p>
+  <p class="fix">→ FBS4-vermelding verwijderen (of onderbouwen).</p>
+  <span class="bron">Bron: <a href="https://store.autel.com/products/autel-g-box3" target="_blank" rel="noopener">store.autel.com (DAS3/FBS3)</a> · adversarieel bevestigd</span>
+</article>
+
+<article class="kaart fout">
   <h3><a href="https://astools.nl/products/obdstar-benz-fbs3-kit" target="_blank" rel="noopener">OBDSTAR BENZ FBS3 Kit</a> — verkeerde Mercedes-chassiscodes <span class="prijs">€159,95 · batch 17</span></h3>
   <p>De inhoud, functies en prijs kloppen, maar de gekoppelde Mercedes-chassiscodes zitten fout: <strong>„GLK-Class (W204/W208)"</strong> — W208 is de CLK, geen GLK (de GLK is X204); en <strong>„SLC-Class (W197)" + „SLS-Class (W197)"</strong> — dezelfde code aan twee modellen, terwijl de SLS de C197/R197 is en de SLC de R172. Omdat een FBS3-sleutelkit per chassis compatibel is, kan een verkeerde code een koper misleiden over de dekking van zijn voertuig.</p>
   <p class="fix">→ Chassiscodes corrigeren: GLK = X204, SLC = R172, SLS = C197/R197.</p>
@@ -861,6 +893,20 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <h2><span class="chip info">Redactie</span> Kleine punten per pagina</h2>
 <p class="intro">Geen fouten die een koop beïnvloeden, wel slordigheden die opvallen bij deze prijsklasse.</p>
+
+<details>
+  <summary>Batch 18 — 8 redactiepunten — klik om uit te klappen (grens van 450 producten / 45% + 2.000 claims)</summary>
+  <ul class="lijstje">
+    <li><strong>SGW-kabels bevestigd als hardware-bypass:</strong> zowel de <a href="https://astools.nl/products/jaltest-fca-secure-gateway-module-12-8-pins-16-pins-obd2-verloopkabel" target="_blank" rel="noopener">FCA (JDC406A)</a> als de <a href="https://astools.nl/products/jaltest-iveco-secure-gateway-module-8-8-pins-16-pins-obd2-verloopkabel" target="_blank" rel="noopener">Iveco Daily (JDC407A)</a> SGW-kabel is een pure hardware-bypass zonder tokens — hetzelfde patroon als de Renault/Nissan-kabel in batch 17.</li>
+    <li><strong>10 Jaltest-kabels correct</strong>, incl. mooie afbakeningen: JDC510A MTU 12-pins (los van de 10-pins JDC537A), JDC570A Deutz 19-pins (los van de 12-pins JDC504A), JDC572.9 Hyundai CE (los van de Robex JDC556A), en JDC530A Claas Combines/Xerion — NIET te breed (anders dan de New Holland-fout in batch 16).</li>
+    <li><a href="https://astools.nl/products/jaltest-weber-4-pins-obd-16-pins-obd2-verloopkabel-waterscooter" target="_blank" rel="noopener">Weber JDC622A</a> is als „waterscooter" getagd; marine klopt, maar dealers scharen Weber onder inboard-motoren — Weber MPE zat historisch wel in Sea-Doo-waterscooters, dus twijfel, geen fout.</li>
+    <li><strong>Autool-lessen toegepast:</strong> de <a href="https://astools.nl/products/autool-svb305-inspectiecamera-6-35-mm-1" target="_blank" rel="noopener">SVB305</a> herhaalt de SVB308-specfouten (batch 14) NIET — 6 leds en 2000 mAh kloppen. BT280 en PT630 zijn volledig correct.</li>
+    <li><strong>Topdon BT600</strong> wordt correct onderscheiden van de BT600 Plus (12V/24V, geen 6/12/24V) — geen verwarring; de ArtiDiag900 Lite-licentie en MK808K-BT-licentie overclaimen niets.</li>
+    <li><strong>JDiag M100 Pro</strong> (non-Full, €156,95) is een legitieme aparte variant met een marktconforme prijs — anders dan de „M100 Pro Full" (€234,95, ~28% te duur) in batch 14. Wel valt Kawasaki weg uit de merkenlijst.</li>
+    <li><a href="https://astools.nl/products/autel-515783ph-4p-accu" target="_blank" rel="noopener">Autel 515783PH-accu</a> (MK908/IM608/MS909) is een echt onderdeelnummer, maar de pagina vermeldt geen enkele accuspec en €149,95 is fors t.o.v. aftermarket.</li>
+    <li><strong>Correct:</strong> JSK01 Merlo-servicesleutel, de Truck Select Brands-licentie (eerlijke modulaire dekking), JDC113.9 Thermo King/Carrier en de G-BOX3-kernfuncties (DAS3/FBS3 EIS, BMW CAS4) — alleen de FBS4-claim erbij is fout.</li>
+  </ul>
+</details>
 
 <details>
   <summary>Batch 17 — 8 redactiepunten — klik om uit te klappen</summary>
@@ -1159,8 +1205,8 @@ a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radi
 
 <footer>
   <p><a href="audit.html" style="color:var(--accent)">→ Bekijk ook de volledige vorm-audit van alle 994 producten</a></p>
-  <p><strong>Methode:</strong> per product is de beschrijving intern gecontroleerd op tegenstrijdigheden en zijn de 3–5 belangrijkste claims geverifieerd tegen fabrikantsites, de officiële Cojali-prijslijst en officiële distributeurs (bronlinks bij elk punt). 1.200 van de 1.918 claims klopten. Vanaf batch 5 wordt elk „fout"-oordeel vóór publicatie adversarieel geverifieerd door een tweede onafhankelijke controle (batch 5–8: telkens 7–8/10 bevestigd; batch 9: 6/7 bevestigd, 1 eigen fout ingetrokken; batch 10: 8/8 bevestigd; batch 11: 1/5 bevestigd; batch 12: 4/8 bevestigd; batch 13: 3/8 (de 5 „weerlegde" programmeren-meldingen bleken bij batch 14 échte overclaims die inmiddels gefixt zijn); batch 14: 7 fouten (3 open, 4 gefixt); batch 15: 4 fouten (3 open, 1 gefixt); batch 16: 2 fouten (1 open, 1 gefixt); batch 17: 2 fouten (FBS3-chassiscodes + JDC632.9 vermogensbereik, beide open)). Volledige data: <em>factcheck-bevindingen.csv</em> (2.379 regels).</p>
-  <p>Batch 1–17 van ±40 · 425 producten (€159–€6.999) · gecontroleerd 4–7 juli 2026 · fix-controle 5 juli: 2 fouten opgelost, 54 nog open · volgende batch: de volgende 25 duurste producten.</p>
+  <p><strong>Methode:</strong> per product is de beschrijving intern gecontroleerd op tegenstrijdigheden en zijn de 3–5 belangrijkste claims geverifieerd tegen fabrikantsites, de officiële Cojali-prijslijst en officiële distributeurs (bronlinks bij elk punt). 1.260 van de 2.002 claims klopten. Vanaf batch 5 wordt elk „fout"-oordeel vóór publicatie adversarieel geverifieerd door een tweede onafhankelijke controle (batch 5–8: telkens 7–8/10 bevestigd; batch 9: 6/7 bevestigd, 1 eigen fout ingetrokken; batch 10: 8/8 bevestigd; batch 11: 1/5 bevestigd; batch 12: 4/8 bevestigd; batch 13: 3/8 (de 5 „weerlegde" programmeren-meldingen bleken bij batch 14 échte overclaims die inmiddels gefixt zijn); batch 14: 7 fouten (3 open, 4 gefixt); batch 15: 4 fouten (3 open, 1 gefixt); batch 16: 2 fouten (1 open, 1 gefixt); batch 17: 2 fouten; batch 18: 6 fouten (fuel-kit 50105182 3x, V2200Air-accu, BT880-CCA, G-BOX3 FBS4 — alle 4/4 kandidaten bevestigd)). Volledige data: <em>factcheck-bevindingen.csv</em> (2.463 regels).</p>
+  <p>Batch 1–18 van ±40 · 450 producten (€139–€6.999) · gecontroleerd 4–7 juli 2026 · fix-controle 5 juli: 2 fouten opgelost, 54 nog open · volgende batch: de volgende 25 duurste producten.</p>
 </footer>
 </div>
 
